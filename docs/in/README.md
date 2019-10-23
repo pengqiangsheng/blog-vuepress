@@ -86,7 +86,7 @@ zero w这款树莓派的主要参数如下：
 因为ssh连接是需要ip地址的，所以我们需要将zero w在第一次开机自动连接wifi，使其和我们的电脑处于一个局域网，这样我们才可以通过ssh连接到zero w的系统。
 同样的在boot分区内，新建一个名为wpa_supplicant.conf的文件，然后往里面写入如下内容后保存：
 
-```shell
+```bash
 country=CN
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
@@ -120,7 +120,7 @@ psk="你的wifi密码"
 
 ##### 6.1.1修改sources.list文件
 
-```javascript
+```bash
 sudo nano /etc/apt/sources.list 
 --注释其他内容，添加以下:
 deb http://mirrors.ustc.edu.cn/raspbian/raspbian/raspbian stretch main contrib non-free rpi
@@ -128,7 +128,7 @@ deb http://mirrors.ustc.edu.cn/raspbian/raspbian/raspbian stretch main contrib n
 
 ##### 6.1.2修改raspi.list文件
 
-```javascript
+```bash
 sudo nano /etc/apt/sources.list.d/raspi.list
 --注释其他内容，添加以下:
 deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian stretch main ui
@@ -136,14 +136,14 @@ deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian stretch main ui
 
 ##### 6.1.3执行更新
 
-```javascript
+```bash
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
 #### 6.2修改时区
 
-```javascript
+```bash
 sudo dpkg-reconfigure tzdata
 ```
 找到亚洲Asia，然后选择shanghai就可以了
@@ -151,7 +151,7 @@ sudo dpkg-reconfigure tzdata
 #### 6.3开机自启ssh
 第一种：
 
-```javascript
+```bash
 sudo raspi-config
 ```
 
@@ -165,7 +165,7 @@ sudo raspi-config
 
 ### 7.安装nginx
 
-```shell
+```bash
 #安装
 sudo apt-get install nginx
 #启动

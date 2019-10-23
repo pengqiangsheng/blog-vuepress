@@ -1,7 +1,8 @@
 {
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "D": "bash deploy.sh"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",

@@ -1,23 +1,23 @@
 ---
 home: true
-heroImage: /logo.png
-actionText: 起步 →
+heroImage: /halcon.png
+actionText: 开始学习 →
 actionLink: /guide/
 features:
-- title: 简明优先
-  details: 对以 markdown 为中心的项目结构，做最简化的配置，帮助你专注于创作。
-- title: Vue 驱动
-  details: 享用 Vue + webpack 开发环境，在 markdown 中使用 Vue 组件，并通过 Vue 开发自定义主题。
+- title: API 简单
+  details: 以halcon为基础进行图像的采集和预处理，API十分简单好用。
+- title: 光栅投影
+  details: 用matlab生成基础的光栅，然后用投影仪投影到被测物体上，过程简易。
 - title: 性能高效
-  details: VuePress 将每个页面生成为预渲染的静态 HTML，每个页面加载之后，然后作为单页面应用程序(SPA)运行。
+  details: 将halcon与光栅投影的方式结合起来，可以在很短的时间内得到物体的三维重构图。
 footer: MIT Licensed | Copyright © 2019-present Peng Qiang Sheng
 ---
 
-<div style="text-align: center">
+<!-- <div style="text-align: center">
   <Bit/>
-</div>
+</div> -->
 
-<div class="features">
+<!-- <div class="features">
   <div class="feature">
     <h2>Simplicity First</h2>
     <p>Minimal setup with markdown-centered project structure helps you focus on writing.</p>
@@ -30,25 +30,24 @@ footer: MIT Licensed | Copyright © 2019-present Peng Qiang Sheng
     <h2>Performant</h2>
     <p>VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.</p>
   </div>
-</div>
+</div> -->
 
-### As Easy as 1, 2, 3
+### 就像1, 2, 3那么简单
 
 ``` bash
-# install
-yarn global add vuepress
-# OR npm install -g vuepress
+# Generation of projection grating
+1.投影光栅的生成
 
-# create a markdown file
-echo '# Hello VuePress' > README.md
+# Image acquisition and preprocessing
+2.图像的采集和预处理
 
-# start writing
-vuepress dev
+# Unwrapping
+3.解包裹
 
-# build to static files
-vuepress build
+# Restore height information
+4.还原高度信息
 ```
 
-::: warning COMPATIBILITY NOTE
-VuePress requires Node.js >= 8.6.
+::: warning 注意事项
+  确保你已经真正理解了三维重构的原理
 :::
