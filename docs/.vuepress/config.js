@@ -55,10 +55,10 @@ function getGuideSidebar (groupA, groupB) {
 	  collapsable: true,
 	  sidebarDepth: 2,
       children: [
-        'frontmatter',
-        'permalinks',
-        'markdown-slot',
-        'global-computed'
+        'principle',
+        'halcon',
+        'raster-generation',
+        'phase-m-p'
       ]
     }
   ]
