@@ -46,10 +46,10 @@ function getGuideSidebar (groupA, groupB) {
       children: [
         '',
         'getting-started',
-        'directory-structure',
-        'basic-config',
-        'assets',
-		'markdown',
+        // 'directory-structure',
+        // 'basic-config',
+        // 'assets',
+		// 'markdown',
 		'reference'
       ]
     },
