@@ -44,26 +44,41 @@ function getGuideSidebar (groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
-        '',
-        'getting-started',
-        // 'directory-structure',
-        // 'basic-config',
-        // 'assets',
-		// 'markdown',
-		'reference'
+				'',
+				'getting-started',
+				'hardware',
+				'software',
+				'calibration-process',
+				'detail',
+				'reference'
       ]
     },
     {
       title: groupB,
-	  collapsable: false,
+	  	collapsable: false,
       children: [
         'principle',
         'halcon',
         'raster-generation',
-		'phase-m-p',
-		'unwrapper',
-		'calibration'
+				'phase-m-p',
+				'unwrapper',
+				'calibration'
       ]
-    }
+		},
+		{
+			title: '完整代码',
+			collapsable: false,
+			children: [
+				'code-halcon',
+				'code-matlab'
+			]
+		},
+		{
+			title: '完整项目',
+			collapsable: false,
+			children: [
+				'project'
+			]
+		}
   ]
 }
