@@ -25,7 +25,4 @@ meta:
 - [实际操作](./getting-started.md)
 - [一些我在研究过程中的参考文献和资料](./reference.md)
 
-
-### Badge <Badge text="beta" type="warn"/> <Badge text="0.10.1+"/>
-
-### 后续更新
+### 持续高产中 <Badge text="ing" type="warn"/> :battery:
