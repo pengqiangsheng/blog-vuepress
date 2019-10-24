@@ -1,70 +1,45 @@
 # 快速上手
 
 ::: warning 注意
-请确保你的 Node.js 版本 >= 8。
+请确保你已经阅读过相应的原理，并且有了一定的理解。
 :::
 
-## 全局安装
+## 系统搭建
 
-如果你只是想尝试一下 VuePress，你可以全局安装它：
+本系统分为两大部分：
+- 第一部分是一台投影仪和一台计算机。投影仪型号为LG HW300G - JE，分辨率为1200*800，亮度300流明。通过投影仪将在计算中通过matlab编程生成的正弦光栅图像投影到被测物体上。
+- 第二部分是CCD相机通过USB2.0与电脑连接去采集图像。CCD相机型号为MER-132-30UC，接口是USB2.0，采用CCD传感器芯片，外形很小，分辨率1292"964，像素尺寸3．75um，全分辨率最大帧率30帧每秒，支持GENICAM接口，可以直接连接HALCON软件，是一款适用于工业检测的高性价的相机。
 
-``` bash
-# 安装
-yarn global add vuepress # 或者：npm install -g vuepress
+> 由CCD采集投影到被测物的受到光栅调制后的图像传输到计算机中，由计算机对采集到的光栅图像进行相应算法处理，最终得到被测物的三维信息。
 
-# 新建一个 markdown 文件
-echo '# Hello VuePress!' > README.md
+### 硬件系统
 
-# 开始写作
-vuepress dev .
+理想的硬件搭建图：
 
-# 构建静态文件
-vuepress build .
-```
+![](./images/3-1.png)
 
-## 现有项目
+实际：
 
-如果你想在一个现有项目中使用 VuePress，同时想要在该项目中管理文档，则应该将 VuePress 安装为本地依赖。作为本地依赖安装让你可以使用持续集成工具，或者一些其他服务（比如 Netlify）来帮助你在每次提交代码时自动部署。
+![](./images/3-2.png)
 
-``` bash
-# 将 VuePress 作为一个本地依赖安装
-yarn add -D vuepress # 或者：npm install -D vuepress
+### 软件系统
 
-# 新建一个 docs 文件夹
-mkdir docs
+可以分为以下：
 
-# 新建一个 markdown 文件
-echo '# Hello VuePress!' > docs/README.md
+- MatLab生成光栅图像
+- 光栅的投影
+- 图像的采集
+- 图像的预处理
+- 图像包裹相位的获取
+- 图像连续相位的获取
+- 求解出相位差
+- 相似三角形对比
+- 高度信息的获取
 
-# 开始写作
-npx vuepress dev docs
-```
+![](./images/3-3.png)
 
-::: warning
-如果你的现有项目依赖了 webpack 3.x，推荐使用 [Yarn](https://yarnpkg.com/en/) 而不是 npm 来安装 VuePress。因为在这种情形下，npm 会生成错误的依赖树。
-:::
+## 分析
 
-接着，在 `package.json` 里加一些脚本:
-
-``` json
-{
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  }
-}
-```
-
-然后就可以开始写作了:
-
-``` bash
-yarn docs:dev # 或者：npm run docs:dev
-```
-
-要生成静态的 HTML 文件，运行：
-
-``` bash
-yarn docs:build # 或者：npm run docs:build
-```
-
-默认情况下，文件将会被生成在 `.vuepress/dist`，当然，你也可以通过 `.vuepress/config.js` 中的 `dest` 字段来修改，生成的文件可以部署到任意的静态文件服务器上，参考 [部署](deploy.md) 来了解更多。
+- 1.搭建了一个[交叉光轴](./phase-m-p.md#基于相位轮廓术的三维检测的原理)的实验平台
+- 2.光栅投影
+- 3.相位轮廓术

@@ -11,13 +11,18 @@ module.exports = {
 		nav: [
 			{ text: '首页', link: '/' },
 			{ text: '指南', link: '/guide/' },
-			{ text: '介绍', link: '/in/' }
+			{
+				text: '生态',
+				items: [
+					{ text: '关于', link: '/about' },
+					{ text: '友链', link: '/contact' }
+				]
+			}
 		],
 		lastUpdated: '上次更新',
 		sidebar: {
 			'/guide/': getGuideSidebar('指南', '深入'),
 			'/': [
-				'',        /* / */
 				'contact', /* /contact.html */
 				'about'    /* /about.html */
 			]
@@ -29,7 +34,7 @@ module.exports = {
 		docsDir: 'docs',
 		docsBranch: 'master',
 		editLinks: true,
-		editLinkText: '帮助我们改进页面内容！'
+		editLinkText: '编辑此页'
 	}
 }
 
@@ -44,21 +49,20 @@ function getGuideSidebar (groupA, groupB) {
         'directory-structure',
         'basic-config',
         'assets',
-        'markdown',
-        'using-vue',
-        'i18n',
-        'deploy',
+		'markdown',
+		'reference'
       ]
     },
     {
       title: groupB,
-	  collapsable: true,
-	  sidebarDepth: 2,
+	  collapsable: false,
       children: [
         'principle',
         'halcon',
         'raster-generation',
-        'phase-m-p'
+		'phase-m-p',
+		'unwrapper',
+		'calibration'
       ]
     }
   ]
