@@ -1,5 +1,8 @@
 ---
 home: true
+meta:
+  - name: keywords
+    content: halcon 光栅投影 三维重构
 heroImage: /halcon.png
 actionText: 开始学习 →
 actionLink: /guide/

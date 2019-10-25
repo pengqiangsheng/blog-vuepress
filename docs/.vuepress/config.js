@@ -3,10 +3,12 @@ module.exports = {
 	description: '一种原理基于光栅投影，使用了最新的halcon平台去做三维重构的尝试！',
 	base: '/', // 基准url
 	href: './favicon.ico',
-	serviceWorker: true,
 	// markdown: {
 	// 	lineNumbers: true
 	// },
+	head: [
+		['link', { rel: 'manifest', href: '/manifest.json' }],
+	],
 	themeConfig: {
 		nav: [
 			{ text: '首页', link: '/' },
@@ -35,7 +37,14 @@ module.exports = {
 		docsBranch: 'master',
 		editLinks: true,
 		editLinkText: '编辑此页'
-	}
+	},
+	plugins: [
+		['@vuepress/back-to-top', true],
+		['@vuepress/pwa', {
+			serviceWorker: true,
+			updatePopup: true
+		}]
+	]
 }
 
 function getGuideSidebar (groupA, groupB) {
