@@ -22,6 +22,9 @@ module.exports = {
 			{ text: '首页', link: '/' },
 			{ text: '指南', link: '/guide/' },
 			{
+				text: '特性', link: '/features/'
+			},
+			{
 				text: '生态',
 				items: [
 					{ text: '关于', link: '/about' },
@@ -32,9 +35,10 @@ module.exports = {
 		lastUpdated: '上次更新',
 		sidebar: {
 			'/guide/': getGuideSidebar('指南', '深入'),
+			'/features/': getFeaturesSidebar('特性'),
 			'/': [
 				'contact', /* /contact.html */
-				'about'    /* /about.html */
+				'about',    /* /about.html */
 			]
 		},
 		sidebarDepth: 2,
@@ -123,3 +127,16 @@ function getGuideSidebar (groupA, groupB) {
 		}
   ]
 }
+
+function getFeaturesSidebar (title) {
+	return [
+	  {
+		title: title,
+		collapsable: false,
+		children: [
+			'',
+			'line-edit'
+		]
+	  }
+	]
+  }
