@@ -167,7 +167,8 @@ function getBlog (title) {
       title: title,
       collapsable: false,
       children: [
-        ''
+		'',
+		'start'
       ]
 	  }
 	]
