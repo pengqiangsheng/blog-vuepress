@@ -6,7 +6,7 @@
         「{{ creator }}」
       </p> 
       <p class="action">
-        <a href="/about/" class="nav-link action-button">探索 →</a>
+        <a href="/about" class="nav-link action-button">探索 →</a>
       </p>
       <div id='test'>
       </div>
