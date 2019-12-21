@@ -1,28 +1,56 @@
 ---
-title: 介绍
+home: true
 meta:
-  - name: description
-    content: 一种基于halcon的光栅投影的三维重构的研究
   - name: keywords
     content: halcon 光栅投影 三维重构
+heroImage: /halcon.png
+actionText: 开始学习 →
+actionLink: /guide/guide
+features:
+- title: API 简单
+  details: 以halcon为基础进行图像的采集和预处理，API十分简单好用。
+- title: 光栅投影
+  details: 用matlab生成基础的光栅，然后用投影仪投影到被测物体上，过程简易。
+- title: 性能高效
+  details: 将halcon与光栅投影的方式结合起来，可以在很短的时间内得到物体的三维重构图。
+footer: MIT Licensed | Copyright © 2019-present Peng Qiang Sheng
 ---
-## 总体思路
 
-- 1.首先对基本的三维检测技术有个基本的了解
-- 2.对halcon进行理解和基本运用
-- 3.掌握相机标定的原理
-- 4.重点对基于光栅投影的相位轮廓术的深入学习和理解应用
+<!-- <div style="text-align: center">
+  <Bit/>
+</div> -->
 
-## 分步骤进行
-本文以halcon快速标定和相移法为基石，重点研究了基于halcon光栅投影的快速三维检测系统。针对检测的精度与速度需求，本文采用的基于halcon的快速标定加上相位轮廓术配合光栅投影，通过matlab计算相移，检测精度高，且检测速度较快。本文的主要内容如下：
+<!-- <div class="features">
+  <div class="feature">
+    <h2>Simplicity First</h2>
+    <p>Minimal setup with markdown-centered project structure helps you focus on writing.</p>
+  </div>
+  <div class="feature">
+    <h2>Vue-Powered</h2>
+    <p>Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.</p>
+  </div>
+  <div class="feature">
+    <h2>Performant</h2>
+    <p>VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.</p>
+  </div>
+</div> -->
 
-- [三维检测技术方法的概述](./principle.md)
-- [halcon的简介](./halcon.md)
-- [光栅投影的生成](./raster-generation.md)
-- [相位轮廓术的原理](./principle.md)
-- [解包裹](./unwrapper.md)
-- [使用halcon进行相机标定](./calibration.md)
-- [实际操作](./getting-started.md)
-- [一些我在研究过程中的参考文献和资料](./reference.md)
+### 就像1, 2, 3那么简单
 
-### 持续高产中 <Badge text="ing" type="warn"/> :battery:
+``` bash
+# Generation of projection grating
+1.投影光栅的生成
+
+# Image acquisition and preprocessing
+2.图像的采集和预处理
+
+# Unwrapping
+3.解包裹
+
+# Restore height information
+4.还原高度信息
+```
+
+::: warning 注意事项
+  确保你已经真正理解了三维重构的原理
+:::

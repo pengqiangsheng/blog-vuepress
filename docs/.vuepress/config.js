@@ -1,6 +1,6 @@
 module.exports = {
-	title: '基于Halcon的光栅投影的三维重构的研究',
-	description: '一种原理基于光栅投影，使用了最新的halcon平台去做三维重构的尝试！',
+	title: '彭小呆的随笔杂谈',
+	description: '天不生我彭小呆，万古长青一生狂',
 	base: '/', // 基准url
 	href: './favicon.ico',
 	// markdown: {
@@ -15,12 +15,16 @@ module.exports = {
 		['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
 		['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#53A8FF' }],
 		['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-		['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+    // ['script', { type: 'text/javascrpit', src: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.min.js'}],
+    // ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.css'}]
 	],
 	themeConfig: {
 		nav: [
-			{ text: '首页', link: '/' },
-			{ text: '指南', link: '/guide/' },
+      { text: '首页', link: '/' },
+      { text: 'halcon指南', link: '/guide/' },
+      { text: '技术', link: '/blog/' },
+      { text: '杂笔', link: '/life/' },
 			{
 				text: '特性', link: '/features/'
 			},
@@ -35,7 +39,9 @@ module.exports = {
 		lastUpdated: '上次更新',
 		sidebar: {
 			'/guide/': getGuideSidebar('指南', '深入'),
-			'/features/': getFeaturesSidebar('特性'),
+      '/features/': getFeaturesSidebar('特性'),
+      '/blog/': getBlog('技术分享'),
+      '/life/': getLife('杂笔'),
 			'/': [
 				'contact', /* /contact.html */
 				'about',    /* /about.html */
@@ -89,7 +95,8 @@ function getGuideSidebar (groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
-				'',
+        '',
+        'guide',
 				'getting-started',
 				'hardware',
 				'software',
@@ -131,12 +138,37 @@ function getGuideSidebar (groupA, groupB) {
 function getFeaturesSidebar (title) {
 	return [
 	  {
-		title: title,
-		collapsable: false,
-		children: [
-			'',
-			'line-edit'
-		]
+      title: title,
+      collapsable: false,
+      children: [
+        '',
+        'line-edit'
+      ]
 	  }
 	]
-  }
+}
+
+function getLife (title) {
+	return [
+	  {
+      title: title,
+      collapsable: false,
+      children: [
+        ''
+      ]
+	  }
+	]
+}
+
+
+function getBlog (title) {
+	return [
+	  {
+      title: title,
+      collapsable: false,
+      children: [
+        ''
+      ]
+	  }
+	]
+}
