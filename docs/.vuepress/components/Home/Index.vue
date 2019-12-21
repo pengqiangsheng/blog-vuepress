@@ -1,7 +1,7 @@
 <template>
   <header class="hero">
     <img src="http://api.mtyqx.cn/api/random.php" alt="hero">
-      <h2 style="border-bottom: none;" id="main-title">{{ this.obj.output }}<span class="typed-cursor">|</span></h2>
+      <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
       <p class="description">
         「{{ creator }}」
       </p> 
@@ -9,28 +9,22 @@
         <a href="/about/" class="nav-link action-button">探索 →</a>
       </p>
       <div id='test'>
-
       </div>
     </header>
 </template>
 <script>
-import EasyTyped from './index'
-
+import EasyTyped from 'easy-typer-js'
 export default {
   name: 'home',
   data() {
     return {
       hitokoto: '黎明前的黑暗是最深不见底的黑暗',
       creator: '彭小呆',
-      img: '/bg.jpg',
-      typing: null,
-      flag: false,
-      timer: null,
       obj: {
         output: '',
         isEnd: false,
         speed: 80,
-        singleBack: 1,
+        singleBack: true,
         sleep: 6000,
         type: 'rollback',
         backSpeed: 40
@@ -38,11 +32,7 @@ export default {
     }
   },
   mounted() {
-    this.init()
-  },
-  beforeDestroy() {
-    clearInterval(this.timer)
-    this.timer = null
+    this.init()  
   },
   methods: {
     // 初始化
@@ -57,15 +47,7 @@ export default {
         .then(({ hitokoto, creator }) => {
           this.creator = creator
           this.hitokoto = hitokoto
-      
-            this.initTyped(hitokoto, 
-              (instance) => {
-                this.fetchData()
-                console.log(instance)
-              }
-              , (output, instance) => {
-              document.getElementById('test').innerHTML = `<h1>${output}</h1>`
-            })
+          this.initTyped(hitokoto, this.fetchData)
         })
         .catch(err => {
           console.error(err)
@@ -79,7 +61,6 @@ export default {
 }
 </script>
 <style lang="stylus">
-@import '../css/typing.css'
   .typed-cursor
     margin-left: 10px
     opacity: 1
@@ -109,5 +90,4 @@ export default {
       opacity: 0
     100%
       opacity: 1
-    
 </style>
