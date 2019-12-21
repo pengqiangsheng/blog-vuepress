@@ -5,7 +5,7 @@ meta:
     content: 知与南 彭小呆 技术分享
 heroImage: /blog.png
 actionText: 开始阅读 →
-actionLink: /blog/start
+actionLink: /blog/start.html
 features:
 - title: JavaScript
   details: 主要分享JavaScript的内容。

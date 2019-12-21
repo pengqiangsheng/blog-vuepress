@@ -13,7 +13,7 @@
     </header>
 </template>
 <script>
-import EasyTyped from 'easy-typer-js'
+import EasyTyper from 'easy-typer-js'
 export default {
   name: 'home',
   data() {
@@ -28,11 +28,15 @@ export default {
         sleep: 6000,
         type: 'rollback',
         backSpeed: 40
-      }
+      },
+      typer: null
     }
   },
   mounted() {
     this.init()  
+  },
+  beforeDestroy() {
+    this.typer.close()
   },
   methods: {
     // 初始化
@@ -47,7 +51,9 @@ export default {
         .then(({ hitokoto, creator }) => {
           this.creator = creator
           this.hitokoto = hitokoto
-          this.initTyped(hitokoto, this.fetchData)
+          this.initTyped(hitokoto, this.fetchData, ()=>{
+            console.log('1')
+          })
         })
         .catch(err => {
           console.error(err)
@@ -55,7 +61,7 @@ export default {
     },
     initTyped(input, fn, hooks) {
       const obj = this.obj
-      const typed = new EasyTyped(obj, input, fn, hooks)
+      this.typer = new EasyTyper(obj, input, fn, hooks)
     }
   }
 }
