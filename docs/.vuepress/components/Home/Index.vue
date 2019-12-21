@@ -51,9 +51,7 @@ export default {
         .then(({ hitokoto, creator }) => {
           this.creator = creator
           this.hitokoto = hitokoto
-          this.initTyped(hitokoto, this.fetchData, ()=>{
-            console.log('1')
-          })
+          this.initTyped(hitokoto, this.fetchData)
         })
         .catch(err => {
           console.error(err)
