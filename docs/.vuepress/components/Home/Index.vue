@@ -1,6 +1,6 @@
 <template>
   <header class="hero">
-    <img src="https://api.dujin.org/pic/" alt="hero">
+    <img src="https://api.ixiaowai.cn/mcapi/mcapi.php" alt="hero">
       <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
       <p class="description">
         「{{ creator }}」
@@ -41,7 +41,12 @@ export default {
   methods: {
     // 初始化
     init() {
+      // this.getImage()
       this.fetchData()
+    },
+    getImage() {
+      fetch('https://api.dujin.org/pic/')
+        .then(res => console.log(res))
     },
     fetchData() {
       fetch('https://v1.hitokoto.cn')
