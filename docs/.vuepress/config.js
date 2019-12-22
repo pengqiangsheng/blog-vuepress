@@ -15,25 +15,26 @@ module.exports = {
 		['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
 		['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#53A8FF' }],
 		['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+		['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+		['meta', { name: 'http-equiv', content: 'Content-Security-Policy'}, { name: 'content', content: 'upgrade-insecure-requests'}]
     // ['script', { type: 'text/javascrpit', src: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.min.js'}],
     // ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.css'}]
 	],
 	themeConfig: {
 		nav: [
 			{ text: '首页', link: '/' },
+			{ text: '指南', link: '/guide/' },
+			{ text: '技术', link: '/blog/' },
+			{ text: '杂笔', link: '/life/' },
+			{ text: '特性', link: '/features/' },
 			{
-				text: '指南',
+				text: '开源',
 				items: [
 					{ text: 'halcon', link: '/halcon/' },
 					{ text: 'easy-typer-js', link: '/typer/' },
 					{ text: 'vue-qrcode-direction', link: '/qrcode/' }
 				]
 			},
-			// { text: '指南', link: '/guide/' },
-			{ text: '技术', link: '/blog/' },
-			{ text: '杂笔', link: '/life/' },
-			{ text: '特性', link: '/features/' },
 			{
 				text: '生态',
 				items: [
