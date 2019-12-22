@@ -5,7 +5,7 @@ meta:
     content: halcon 光栅投影 三维重构
 heroImage: /halcon.png
 actionText: 开始学习 →
-actionLink: /guide/guide
+actionLink: /halcon/guide
 features:
 - title: API 简单
   details: 以halcon为基础进行图像的采集和预处理，API十分简单好用。

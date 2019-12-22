@@ -21,13 +21,19 @@ module.exports = {
 	],
 	themeConfig: {
 		nav: [
-      { text: '首页', link: '/' },
-      { text: 'halcon指南', link: '/guide/' },
-      { text: '技术', link: '/blog/' },
-      { text: '杂笔', link: '/life/' },
+			{ text: '首页', link: '/' },
 			{
-				text: '特性', link: '/features/'
+				text: '指南',
+				items: [
+					{ text: 'halcon', link: '/halcon/' },
+					{ text: 'easy-typer-js', link: '/typer/' },
+					{ text: 'vue-qrcode-direction', link: '/qrcode/' }
+				]
 			},
+			// { text: '指南', link: '/guide/' },
+			{ text: '技术', link: '/blog/' },
+			{ text: '杂笔', link: '/life/' },
+			{ text: '特性', link: '/features/' },
 			{
 				text: '生态',
 				items: [
@@ -38,10 +44,12 @@ module.exports = {
 		],
 		lastUpdated: '上次更新',
 		sidebar: {
-			'/guide/': getGuideSidebar('指南', '深入'),
-      '/features/': getFeaturesSidebar('特性'),
-      '/blog/': getBlog('技术分享'),
-      '/life/': getLife('杂笔'),
+			'/halcon/': getHalconSidebar('指南', '深入'),
+			'/typer/': getTyperSidebar('打字机插件'),
+			'/qrcode/': getQrCodeSidebar('二维码插件'),
+      		'/features/': getFeaturesSidebar('特性'),
+      		'/blog/': getBlog('技术分享'),
+      		'/life/': getLife('杂笔'),
 			'/': [
 				'contact', /* /contact.html */
 				'about',    /* /about.html */
@@ -89,7 +97,7 @@ module.exports = {
 	]
 }
 
-function getGuideSidebar (groupA, groupB) {
+function getHalconSidebar (groupA, groupB) {
   return [
     {
       title: groupA,
@@ -106,34 +114,62 @@ function getGuideSidebar (groupA, groupB) {
       ]
     },
     {
-      title: groupB,
+      	title: groupB,
 	  	collapsable: false,
-      children: [
-        'principle',
-        'halcon',
-        'raster-generation',
-				'phase-m-p',
-				'unwrapper',
-				'calibration'
-      ]
-		},
-		{
-			title: '完整代码',
-			collapsable: false,
-			children: [
-				'code-halcon',
-				'code-matlab'
-			]
-		},
-		{
-			title: '完整项目',
-			collapsable: false,
-			children: [
-				'project'
-			]
-		}
+      	children: [
+			'principle',
+			'halcon',
+			'raster-generation',
+			'phase-m-p',
+			'unwrapper',
+			'calibration'
+      	]
+	},
+	{
+		title: '完整代码',
+		collapsable: false,
+		children: [
+			'code-halcon',
+			'code-matlab'
+		]
+	},
+	{
+		title: '完整项目',
+		collapsable: false,
+		children: [
+			'project'
+		]
+	}
   ]
 }
+
+function getTyperSidebar (title) {
+	return [
+		{
+			title: title,
+			collapsable: false,
+			children: [
+				''
+			]
+		}
+	]
+}
+
+
+function getQrCodeSidebar (title) {
+	return [
+		{
+			title: title,
+			collapsable: false,
+			children: [
+				''
+			]
+		}
+	]
+}
+
+
+
 
 function getFeaturesSidebar (title) {
 	return [
@@ -159,7 +195,6 @@ function getLife (title) {
 	  }
 	]
 }
-
 
 function getBlog (title) {
 	return [

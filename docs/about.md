@@ -7,8 +7,27 @@
 ## 关于我
 
 我是一个什么样的人呢？其实我也不是很了解自己。
+> 每一个时期都会做一些事情，有的时候自己都不是很明白为什么做这些，但，这就是生活！
 
-## 关于这篇分享
+## 目前在做维护的两个开源项目
+- [easy-typer-js](https://github.com/pengqiangsheng/easy-typer-js)
+- [vue-qrcode-directive](https://github.com/pengqiangsheng/vue-qrcode-directive)
+
+## 个人部署的一些网站
+
+- [博客](https://inner.ink)
+- [文档](https://docs.inner.ink)
+- [私有Git](https://git.inner.ink)
+- [私有Npm](https://registry.inner.ink)
+- [网易云api](https://api.inner.ink/) 
+- [指舞社官网](https://fingerdancer.cn/) 
+- [去哪儿demo](https://travel.inner.ink/) 
+- [去哪儿demo---history模式](http://h.travel.inner.ink/) 
+- [微信读书demo](https://book.inner.ink/) 
+- [私有mysql](https://db.inner.ink/)
+- [书屋](http://book.admin.inner.ink/)  
+
+## 关于这篇halcon分享
 
 ### 前言
 
@@ -27,7 +46,7 @@
 
 > 很喜欢的一句话
 
-<a-word>很多事情你不做，就永远不会知道自己能做成什么样。</a-word>
+<pqs-a-word>很多事情你不做，就永远不会知道自己能做成什么样。</pqs-a-word>
 
 - 很多时候我们害怕自己不能很好的做成一件事。所以，在准备阶段就一直给自己暗示说自己不行。
 - 然后找很多借口，给自己洗脑说自己是真的完成。其实仔细想想，真的有那么难吗？
@@ -36,7 +55,7 @@
 
 > 还有一句话送给拖延症的童鞋
 
-<a-word>马上开始。</a-word>
+<pqs-a-word>马上开始。</pqs-a-word>
 
 - 事情越拖越久，惰性越大，给自己找的借口越多。
 - 最后日复一日，一事无成。
@@ -48,14 +67,14 @@
 - 2.再从光栅投影三维检测入手，在知网、万方、维普、百度学术，反正各种地方一直找很多研究文献，然后全部下载下来，整理好。
 - 3.资料收集的差不多，就是开始啃骨头了，哇，原理部分真的是让人要死要死的，一度感觉脑袋要爆炸，这是什么鬼？什么单目视觉、双目视觉、莫尔条纹、三步、四步相移法等等各种原理轰炸一波。然后确认用的是相位轮廓术（四步相移法）。[三维检测技术各大原理](./guide/principle.md) <Badge text="戳一戳" type="warn"/>
 - 4.开始理解四步相移法的原理，哇一个公式又臭又长，如下咯
-![2-1](./guide/images/2-4.png) <Badge text="心态爆炸" type="error"/>
-![2-1](./guide/images/2-9.png) <Badge text="+1" type="error"/>
+![2-1](./halcon/images/2-4.png) <Badge text="心态爆炸" type="error"/>
+![2-1](./halcon/images/2-9.png) <Badge text="+1" type="error"/>
 - 5.真的会发现，以前的学的公式都是幼儿园级别的。这一个公式光理解就要好几天。。。
 - 6.原理理解的差不多了，就可以开始撸了，实验系统平台的搭建也是很复杂，搞了我很久。
 - 这个是理想图
-![](./guide/images/3-1.png)
+![](./halcon/images/3-1.png)
 - 这个是实际图
-![](./guide/images/3-2.png)
+![](./halcon/images/3-2.png)
 - 7.原理部分最好理解的，也就是骨头最不硬的部分应该是 [生成光栅并且投影](./guide/raster-generation.md) <Badge text="戳一戳" type="warn"/> 超简单，一两天搞定。
 - 8.然后按照级别，标定应该是算中等难度的。
 
