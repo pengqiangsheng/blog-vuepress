@@ -3,9 +3,6 @@ module.exports = {
 	description: '天不生我彭小呆，万古长青一生狂',
 	base: '/', // 基准url
 	href: './favicon.ico',
-	// markdown: {
-	// 	lineNumbers: true
-	// },
 	head: [
 		['link', { rel: 'icon', href: '/logo.png' }],
 		['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -17,8 +14,8 @@ module.exports = {
 		['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
 		['meta', { name: 'msapplication-TileColor', content: '#000000' }],
 		['meta', { 'http-equiv': 'Content-Security-Policy', content: 'Content-Security-Policy'}, { name: 'content', content: 'upgrade-insecure-requests'}]
-    // ['script', { type: 'text/javascrpit', src: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.min.js'}],
-    // ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.css'}]
+    	// ['script', { type: 'text/javascrpit', src: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.min.js'}],
+    	// ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.css'}]
 	],
 	themeConfig: {
 		nav: [
@@ -156,7 +153,6 @@ function getTyperSidebar (title) {
 	]
 }
 
-
 function getQrCodeSidebar (title) {
 	return [
 		{
@@ -168,9 +164,6 @@ function getQrCodeSidebar (title) {
 		}
 	]
 }
-
-
-
 
 function getFeaturesSidebar (title) {
 	return [

@@ -1,6 +1,6 @@
 <template>
   <header class="hero">
-    <img src="http://api.mtyqx.cn/api/random.php" alt="hero">
+    <img src="https://api.dujin.org/pic/" alt="hero">
       <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
       <p class="description">
         「{{ creator }}」
