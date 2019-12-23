@@ -1,25 +1,15 @@
 <template>
-  <header class="hero">
+  <div class="esay-typer-warpper">
     <img src="https://api.ixiaowai.cn/mcapi/mcapi.php" alt="hero">
-      <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
-      <p class="description">
-        「{{ creator }}」
-      </p> 
-      <p class="action">
-        <a href="/about" class="nav-link action-button">探索 →</a> <a href="/typer/" class="nav-link action-button" style="margin-left:20px;">打字原理 →</a>
-      </p>
-      <div id='test'>
-      </div>
-    </header>
+    <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
+  </div>
 </template>
+
 <script>
 import EasyTyper from 'easy-typer-js'
 export default {
-  name: 'home',
-  data() {
+  data () {
     return {
-      hitokoto: '黎明前的黑暗是最深不见底的黑暗',
-      creator: '彭小呆',
       obj: {
         output: '',
         isEnd: false,
@@ -41,12 +31,7 @@ export default {
   methods: {
     // 初始化
     init() {
-      // this.getImage()
       this.fetchData()
-    },
-    getImage() {
-      fetch('https://api.dujin.org/pic/')
-        .then(res => console.log(res))
     },
     fetchData() {
       fetch('https://v1.hitokoto.cn')
@@ -54,9 +39,8 @@ export default {
           return res.json()
         })
         .then(({ hitokoto, creator }) => {
-          this.creator = creator
-          this.hitokoto = hitokoto
-          this.initTyped(hitokoto, this.fetchData)
+          const input = `${hitokoto} —— [${creator}]`
+          this.initTyped(input, this.fetchData)
         })
         .catch(err => {
           console.error(err)

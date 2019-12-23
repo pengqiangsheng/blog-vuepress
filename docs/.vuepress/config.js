@@ -45,9 +45,9 @@ module.exports = {
 			'/halcon/': getHalconSidebar('指南', '深入'),
 			'/typer/': getTyperSidebar('打字机插件'),
 			'/qrcode/': getQrCodeSidebar('二维码插件'),
-      		'/features/': getFeaturesSidebar('特性'),
-      		'/blog/': getBlog('技术分享'),
-      		'/life/': getLife('杂笔'),
+      '/features/': getFeaturesSidebar('特性'),
+      '/blog/': getBlog('技术分享'),
+      '/life/': getLife('杂笔'),
 			'/': [
 				'contact', /* /contact.html */
 				'about',    /* /about.html */
@@ -112,32 +112,32 @@ function getHalconSidebar (groupA, groupB) {
       ]
     },
     {
-      	title: groupB,
+      title: groupB,
 	  	collapsable: false,
-      	children: [
-			'principle',
-			'halcon',
-			'raster-generation',
-			'phase-m-p',
-			'unwrapper',
-			'calibration'
-      	]
-	},
-	{
-		title: '完整代码',
-		collapsable: false,
-		children: [
-			'code-halcon',
-			'code-matlab'
-		]
-	},
-	{
-		title: '完整项目',
-		collapsable: false,
-		children: [
-			'project'
-		]
-	}
+      children: [
+        'principle',
+        'halcon',
+        'raster-generation',
+        'phase-m-p',
+        'unwrapper',
+        'calibration'
+      ]
+    },
+    {
+      title: '完整代码',
+      collapsable: false,
+      children: [
+        'code-halcon',
+        'code-matlab'
+      ]
+    },
+    {
+      title: '完整项目',
+      collapsable: false,
+      children: [
+        'project'
+      ]
+    }
   ]
 }
 
@@ -172,7 +172,8 @@ function getFeaturesSidebar (title) {
       collapsable: false,
       children: [
         '',
-        'line-edit'
+        'line-edit',
+        'easy-typer'
       ]
 	  }
 	]
@@ -184,7 +185,10 @@ function getLife (title) {
       title: title,
       collapsable: false,
       children: [
-        ''
+        '',
+        '中国福州鼓山半日游',
+        '我们毕业了',
+        '深海迷航联机教程'
       ]
 	  }
 	]
@@ -196,8 +200,40 @@ function getBlog (title) {
       title: title,
       collapsable: false,
       children: [
-		'',
-		'start'
+        '',
+        'start'
+      ]
+    },
+    {
+      title: 'JavaScript && NodeJs',
+      collapsable: false,
+      children: [
+        '基于node的断点续传、分片上传',
+        '基于node的分片传输和下载',
+      ]
+    },
+    {
+      title: 'Linux',
+      collapsable: false,
+      children: [
+        'docker-gogs-nginx配置Git服务自动部署Web应用',
+        '使用树莓派构建一台服务器，永久运行网站',
+        '用nginx配置反向代理实现二级域名配置到公网ip的不同端口的应用',
+        'Centos-cp-去掉覆盖提醒',
+        'Centos部署ngrok内网穿透服务器',
+      ]
+    },
+    {
+      title: 'Other',
+      collapsable: false,
+      children: [
+        '双向链表',
+        '经典游戏贪吃蛇Snake',
+        '小飞机ss-ssr的部署方法',
+        'github更新项目',
+        '关于php执行shell命令的一些体会',
+        'hexo生成博文插入图片的办法',
+        '用hexo和github搭建个人博客小站全攻略',
       ]
 	  }
 	]

@@ -1,8 +1,25 @@
 # 关于
 
-> 介绍一下我写这个分享的原因吧
-
 [[toc]]
+
+## 击中心灵的句子 <Badge text="Hit"/>
+
+<pqs-a-word>我既抬头看不见月亮，低头也不见那遍地的六便士</pqs-a-word>
+
+
+
+## 联系方式
+- [2945802136@qq.com](#联系方式)
+
+## 个人信息
+
+- 彭小呆
+- 职业: 前端开发工程师
+- 城市：厦门
+
+## 友情链接
+
+[☞即达](/contact.html)
 
 ## 关于我
 
@@ -82,6 +99,6 @@
 
 :star2: :star2: :star2: :star2: 项目地址 :arrow_right: [Github](https://github.com/pengqiangsheng/halcon) :+1:
 
-### 努力更新中 <Badge text="2019.10.24"/> 
+### 努力更新中 <Badge text="2019.12.23"/> 
 :pig_nose:  :pig_nose:  :pig_nose:  :pig_nose:
 

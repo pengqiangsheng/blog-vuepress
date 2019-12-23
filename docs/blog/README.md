@@ -11,7 +11,7 @@ features:
   details: 主要分享JavaScript的内容。
 - title: Linux
   details: 偶尔会分享一些服务器相关的知识。
-- title: other
+- title: Other
   details: 有时也会涉猎其他领域。
 footer: MIT Licensed | Copyright © 2019-present Peng Qiang Sheng
 ---
