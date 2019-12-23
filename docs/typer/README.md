@@ -47,7 +47,7 @@ const typed = new EasyTyper(obj, input, fn, hooks)
 <script src="./easy-typer-js"></script>
 
 //cdn导入
-<script src="https://cdn.jsdelivr.net/npm/easy-typer-js@1.0.1/easyTyper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/easy-typer-js@1.0.3/easy-typer-min.js"></script>
 ```
 
 ### 2.2 使用它作为你最强大的武器吧！
@@ -101,15 +101,70 @@ export default {
 ```
 
 #### 2.2.3 在React中使用
+
+> 打开页面你会发现`我是被React所创造出来的！`这句话上帝所诉说！
+
+![](http://img.pqs.guozhaoxi.top/react.gif)
+
+```js
+import EasyTyper from 'easy-typer-js'
+
+class showText extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      output: '',
+      typer: null
+    }
+    this.initTyper = this.initTyper.bind(this)
+    this.changeOutput = this.changeOutput.bind(this)
+  }
+
+  initTyper() {
+    // 配置对象
+    const obj = {
+      output: '',
+      isEnd: false,
+      speed: 80,
+      singleBack: false,
+      sleep: 0,
+      type: 'normal',
+      backSpeed: 40
+    }
+    // 实例化
+    this.typer = new EasyTyper(obj, '我是被React所创造出来的！', this.completeAsentence, this.changeOutput)
+  }
+
+  // 输出完毕后的回调函数
+  completeAsentence() {
+    console.log('输出完毕！长官！')
+  }
+
+  // 钩子函数和setState结合
+  changeOutput(output) {
+    this.setState(state => ({
+      output: output
+    }))
+  }
+
+  render() {
+    return (
+      <p>{this.state.output}</p>
+    )
+  }
+}
+
+
+
 ```
-react
-```
 
 
 
-### 2.3[实战] 实践出真理
+### 2.3[实战] 实践出真理 ( 完整代码 )
 
-#### 2.3.1 在MVVM类框架中使用（Vue）
+
+
+#### 2.3.1 Vue + Vuepress + 一言API === 实现博客首页炫酷文字输出效果
 
 > 以下为完整代码！！！
 
@@ -132,7 +187,7 @@ export default {
         output: '',
         isEnd: false,
         speed: 80,
-        singleBack: 1,
+        singleBack: false,
         sleep: 0,
         type: 'rollback',
         backSpeed: 40
@@ -208,11 +263,99 @@ export default {
 
 ![](https://user-gold-cdn.xitu.io/2019/12/21/16f27c7653b345ee?w=1920&h=1080&f=gif&s=3531097)
 
-#### 2.3.2原生实例
+
+
+#### 2.3.2 在React中
+
+
+
+```js
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import EasyTyper from 'easy-typer-js'
+
+class showText extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      output: '',
+      typer: null
+    }
+    this.initTyper = this.initTyper.bind(this)
+    this.changeOutput = this.changeOutput.bind(this)
+  }
+
+  componentDidMount() {
+    this.initTyper()
+  }
+
+  componentWillUnmount() {
+    this.typer.close()
+  }
+
+  initTyper() {
+    // 配置对象
+    const obj = {
+      output: '',
+      isEnd: false,
+      speed: 80,
+      singleBack: false,
+      sleep: 0,
+      type: 'normal',
+      backSpeed: 40
+    }
+    // 实例化
+    this.typer = new EasyTyper(obj, '我是被React所创造出来的！', this.completeAsentence, this.changeOutput)
+  }
+
+  // 输出完毕后的回调函数
+  completeAsentence() {
+    console.log('输出完毕！长官！')
+  }
+
+  // 钩子函数和setState结合
+  changeOutput(output) {
+    this.setState(state => ({
+      output: output
+    }))
+  }
+
+  render() {
+    return (
+       <div className="App">
+       <header className="App-header">
+         <img src={logo} className="App-logo" alt="logo" />
+         <p>{this.state.output}</p>
+         <a
+           className="App-link"
+           href="https://reactjs.org"
+           target="_blank"
+           rel="noopener noreferrer"
+         >
+           上帝
+         </a>
+       </header>
+     </div>
+    )
+  }
+}
+
+export default showText
+
+```
+> 效果如下
+
+##### 只输出一句话
+
+![](http://img.pqs.guozhaoxi.top/react.gif)
+
+
+#### 2.3.3 原生实例
 
 ```html
 <div id="output"></div>
-<script src="../lib/esayTyper.js"></script>
+<script src="./esay-typer-min.js"></script>
 ```
 ```js
 
@@ -249,6 +392,11 @@ let timer = setTimeout(() => {
 ##### 第一句输出后回滚，第二句和第三句不回滚！
 
 ![](https://user-gold-cdn.xitu.io/2019/12/21/16f27f240fff13bd?w=1920&h=1080&f=gif&s=6786978)
+
+
+
+
+
 
 
 ## 三、参数解析
@@ -308,7 +456,7 @@ obj配置对象校验非常严格，对象的字段和类型都要遵从以上�
 
 - easy-typer-js官网: [https://docs.inner.ink/typer/](https://docs.inner.ink/typer/)
 - Github文档地址: [https://github.com/pengqiangsheng/easy-typer-js](https://github.com/pengqiangsheng/easy-typer-js)
-- CDN地址: [https://cdn.jsdelivr.net/npm/easy-typer-js@1.0.1/easyTyper.min.js](https://cdn.jsdelivr.net/npm/easy-typer-js@1.0.1/easyTyper.min.js)
+- CDN地址: [https://cdn.jsdelivr.net/npm/easy-typer-js@1.0.3/easy-typer-min.js](https://cdn.jsdelivr.net/npm/easy-typer-js@1.0.3/easy-typer-min.js)
 
 
 ## 六、计划更新内容

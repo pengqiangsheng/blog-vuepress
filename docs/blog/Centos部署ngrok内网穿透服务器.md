@@ -37,7 +37,7 @@ git clone https://github.com/inconshreveable/ngrok.git
 
 >解析一个二级域名作为你的ngrok客户端访问的域名，记录类型为A记录，记录值ngrok，ip为你的服务器ip。
 
-![](Centos部署ngrok内网穿透服务器/1.png)
+![](./images/ngrok/1.png)
 
 ## 4.给你的域名生成证书
 在ngrok根目录下执行以下命令生成证书
@@ -99,19 +99,19 @@ server_addr: "ngrok.inner.ink:4443"
 trust_host_root_certs: false
 ```
 
-![](Centos部署ngrok内网穿透服务器/4.png)
+![](./images/ngrok/4.png)
 
 ### 3.启动内网穿透ngrok.exe
 
 打开cmd，然后在ngrok这个目录下输入`ngrok -config=ngrok.cfg -subdomain=shmh 4000`按回车运行
 
-![](Centos部署ngrok内网穿透服务器/3.jpg)
+![](./images/ngrok/3.jpg)
 
 ### 4.在浏览器中访问shmh.ngrok.inner.ink:9000
 
 可以看到我的博客已经被访问了，而且ngrok客服端中也会有GET报文出现。
 
-![](Centos部署ngrok内网穿透服务器/2.jpg)
+![](./images/ngrok/2.jpg)
 
 ### 5.配置deploy.bat文件方便启动
 

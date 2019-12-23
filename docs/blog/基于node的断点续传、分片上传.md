@@ -20,18 +20,18 @@ categories: node
 #### 详细的原理和步骤，请参见文章：[Node+H5实现大文件分片上传](https://segmentfault.com/a/1190000008899001)
 
 ### 三、运行效果
-![](基于node的断点续传、分片上传/1.png)
+![](./images/node/1.png)
 
-![](基于node的断点续传、分片上传/2.png)
+![](./images/node/2.png)
 
-![](基于node的断点续传、分片上传/3.png)
+![](./images/node/3.png)
 
 ### 四、断点续传效果
 #### 实验1
-![](基于node的断点续传、分片上传/cut-1.png)
+![](./images/node/cut-1.png)
 
 可以看到点击完暂停后是停在了第73片上面
-![](基于node的断点续传、分片上传/cut-2.png)
+![](./images/node/cut-2.png)
 
 然后点击继续后上传会先验证停在那个位置，看控制台那边返回了一个73的array，说明已经上传了73片，然后继续上传剩余的。
 

@@ -25,10 +25,10 @@ categories: hexo
 >2.[Git](https://git-scm.com/)
 >安装Node.js和Git之后我们可以运行使用<kbd>Win</kbd>+<kbd>R</kbd>打开运行窗口，然后输入`cmd`进入命令提示符：
 >`$ node --version`
->![](用hexo和github搭建个人博客小站全攻略/1.png)
+>![](./images/hexo/1.png)
 >如果看到上述内容说明Node.js已经安装成功了
 >`$ git --version`
->![](用hexo和github搭建个人博客小站全攻略/2.png)
+>![](./images/hexo/2.png)
 >如果看到上述内容说明git已经安装成功了
 >如果出现提示“不是内部或外部命令...”请看第5点的注意事项
 ### 4.安装hexo
@@ -36,7 +36,7 @@ categories: hexo
 >`$ npm install -g hexo-cli`
 >等待安装完成后
 >`$ hexo --version`
->![](用hexo和github搭建个人博客小站全攻略/3.png)
+>![](./images/hexo/3.png)
 >看到这些信息说明hexo安装完成
 ### 5.注意事项
 >1.如果出现提示“node不是内部或外部命令，也不是可运行的程序或批处理文件”此类的提示可能有两个原因
@@ -51,11 +51,11 @@ categories: hexo
 ## 二.Hexo建站
 
 ### 1.在你电脑的一个你熟悉的位置新建一个文件夹hexo
->![](用hexo和github搭建个人博客小站全攻略/4.png)
+>![](./images/hexo/4.png)
 ### 2.在命令提示符中进入这个文件夹后执行hexo init
 >`$ hexo init`耐心等待一小会时间
->![](用hexo和github搭建个人博客小站全攻略/5-1.png)
->![](用hexo和github搭建个人博客小站全攻略/5-2.png)
+>![](./images/hexo/5-1.png)
+>![](./images/hexo/5-2.png)
 >如果看到以上信息说明hexo init成功了，接着打开刚刚创建的文件夹，可以看到这样的目录结构：
 >hexo
 >|--node_modules
@@ -69,7 +69,7 @@ categories: hexo
 >|----package-lock.json
 >这里对hexo目录就不进行太多的讲解
 >需要详细了解的朋友，请转到: **[文档|hexo](https://hexo.io/zh-cn/docs/)**
->![](用hexo和github搭建个人博客小站全攻略/5-3.png)
+>![](./images/hexo/5-3.png)
 ### 3.部署你的博客网站到本地进行预览
 >按照顺序三步走
 
@@ -84,7 +84,7 @@ categories: hexo
 >访问[http://localhost:4000/](http://localhost:4000/)
 >访问后，应该可以看到如下页面，说明你的博客小站搭建成功了！
 >这个页面的主题是hexo官方自带主题landscape
->![](用hexo和github搭建个人博客小站全攻略/5-4.png)
+>![](./images/hexo/5-4.png)
 ### 5.主题配置
 >这里呢，我推荐使用**[Next主题](http://theme-next.iissnan.com/)**
 
@@ -94,9 +94,9 @@ categories: hexo
 >`$ git clone https://github.com/iissnan/hexo-theme-next themes/next`
 
 >等待下载完成后可以在hexo/themes文件夹下看到：
->![](用hexo和github搭建个人博客小站全攻略/next.png)
+>![](./images/hexo/next.png)
 >打开hexo根目录下的config.yml文件
->![](用hexo和github搭建个人博客小站全攻略/hexo-config.png)
+>![](./images/hexo/hexo-config.png)
 >找到字段`theme: landscape`
 >把`landscape`换成`next`，然后保存
 >接着按照部署到本地的方法执行这三步
@@ -105,7 +105,7 @@ categories: hexo
 >`$ hexo server`
 >然后打开你的浏览器访问[http://localhost:4000/](http://localhost:4000/)
 >你会神奇的发现主题已经换成next的简约风格
->![](用hexo和github搭建个人博客小站全攻略/5-6.png)
+>![](./images/hexo/5-6.png)
 ### 6.更多关于Next主题的内容
 >请访问：**[Next使用文档](http://theme-next.iissnan.com/getting-started.html)**
 
@@ -114,16 +114,16 @@ categories: hexo
 ### 1.注册github账号
 >访问[github](https://github.com/)
 >输入账号，邮箱，密码进行注册
->![](用hexo和github搭建个人博客小站全攻略/6-1.png)
+>![](./images/hexo/6-1.png)
 ### 2.新建一个项目
->![](用hexo和github搭建个人博客小站全攻略/6-2.png)
+>![](./images/hexo/6-2.png)
 ### 3.配置项目信息
 >注意项目名字格式必须是:`username.github.io`
 >`username`就是你注册时的用户名
->![](用hexo和github搭建个人博客小站全攻略/6-5.png)
+>![](./images/hexo/6-5.png)
 ### 4.创建好之后来到项目页面
 >复制一下https的项目地址
->![](用hexo和github搭建个人博客小站全攻略/6-6.png)
+>![](./images/hexo/6-6.png)
 ### 5.上传本地hexo博客项目到github上
 >有两种方式，一种是https传输，另一种是ssh秘钥传输
 
@@ -148,7 +148,7 @@ deploy:
 >然后再`$ hexo deploy`
 >执行过程中会让你输入github的账号和密码
 >账号密码验证成功后提示以下信息说明上传代码成功
->![](用hexo和github搭建个人博客小站全攻略/6-7.png)
+>![](./images/hexo/6-7.png)
 #### 5.2 ssh秘钥传输
 ##### 5.2.1 检查本机现有的ssh秘钥
 >输入以下两条命令查看你是否有名为id_rsa和id_dsa.pub的2个文件
@@ -163,7 +163,7 @@ deploy:
 >`$ clip < ~/.ssh/id_rsa.pub`
 >运行这条命令可以将秘钥的内容复制到剪切板
 >然后打开github，添加ssh秘钥
->![](用hexo和github搭建个人博客小站全攻略/6-10.png)
+>![](./images/hexo/6-10.png)
 ##### 5.2.4 测试ssh秘钥是否成功添加到GitHub
 >`$ ssh -T git@github.com`注意就是运行此命令
 >执行过程中会有如下提示，选择yes即可
@@ -183,10 +183,10 @@ deploy:
 >执行`$ hexo deploy`即可上传
 #### 5.3 打开你的github项目页面
 >看到如下信息,你的博客代码已经成功的托管在github上了
->![](用hexo和github搭建个人博客小站全攻略/6-8.png)
+>![](./images/hexo/6-8.png)
 #### 5.4 打开浏览器
 >输入`username.github.io`，`username`就是你的github用户名
 >例如我的[https://johnlly.github.io/](https://johnlly.github.io/)可以访问到页面
 >至此就大功告成了，剩下的就是主题的配置和文章的撰写了
->![](用hexo和github搭建个人博客小站全攻略/6-9.png)
+>![](./images/hexo/6-9.png)
 #### 后续更新...

@@ -2,6 +2,8 @@
   <div class="esay-typer-warpper">
     <img src="https://api.ixiaowai.cn/mcapi/mcapi.php" alt="hero">
     <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
+    <!-- <a href="#效果如下" class="nav-link action-button" v-if="flag" @click="play">重置</a> 
+    <a href="#效果如下" class="nav-link action-button" v-else @click="close">暂停</a>  -->
   </div>
 </template>
 
@@ -19,7 +21,8 @@ export default {
         type: 'rollback',
         backSpeed: 40
       },
-      typer: null
+      typer: null,
+      flag: false
     }
   },
   mounted() {
@@ -49,11 +52,35 @@ export default {
     initTyped(input, fn, hooks) {
       const obj = this.obj
       this.typer = new EasyTyper(obj, input, fn, hooks)
+    },
+    close() {
+      this.flag = true
+      this.typer.close()
+      console.log( this.typer)
+      // this.typer = null
+      // console.log(this.typer)
+    },
+    play() {
+      this.flag = false
+      this.obj.isEnd = false
+      this.fetchData()
     }
   }
 }
 </script>
 <style lang="stylus">
+  .action-button {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #53a8ff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 4px;
+    -webkit-transition: background-color 0.1s ease;
+    transition: background-color 0.1s ease;
+    box-sizing: border-box;
+    border-bottom: 1px solid #3197ff;
+  }
   .typed-cursor
     margin-left: 10px
     opacity: 1

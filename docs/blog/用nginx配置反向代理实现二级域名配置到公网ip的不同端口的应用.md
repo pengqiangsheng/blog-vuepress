@@ -15,28 +15,28 @@ categories: nginx
 ## 前提
 你需要有一个域名和一台服务器（国内需备案）
 然后去解析域名，添加两个A记录如下图
-![](用nginx配置反向代理实现二级域名配置到公网ip的不同端口的应用/0.png)
+![](./images/nginx/0.png)
 ## Nginx方向代理
 我们要如何使用这个技能呢？
 
 - 1.首先找到你服务器中nginx的配置文件所在的文件夹
     一般都是`/usr/local/nginx/conf/`这个文件夹下有个nginx.conf或者default.conf反正.conf的文件都看一看
     命令是`cat nginx.conf`
-    ![](用nginx配置反向代理实现二级域名配置到公网ip的不同端口的应用/1.png)
+    ![](./images/nginx/1.png)
 - 2.然后打开nginx.conf看一眼里面的配置
     主要是找到一句话叫做`include xxxx/*.conf`,如果没有你自己加一句吧
-    ![](用nginx配置反向代理实现二级域名配置到公网ip的不同端口的应用/2.png)
+    ![](./images/nginx/2.png)
 - 3.然后进入这个xxxx文件夹下新建一个.conf，我这里是gogs.conf
     然后编辑gogs.conf的内容为下图，然后保存
-    ![](用nginx配置反向代理实现二级域名配置到公网ip的不同端口的应用/3.jpg)
+    ![](./images/nginx/3.jpg)
 - 4.记得重启nginx，如果没报错的话，你配置应该成功了
 
 然后打开浏览器输入git.aboutme.ink试试
-![](用nginx配置反向代理实现二级域名配置到公网ip的不同端口的应用/5.png)
+![](./images/nginx/5.png)
 成功咯！
 ![](https://inner.ink/pqs/img/wen.gif)
 然后我再来一个cloud.aboutme.ink试试,打开浏览器访问 cloud.aboutme.ink也可以访问了
-![](用nginx配置反向代理实现二级域名配置到公网ip的不同端口的应用/6.png)
+![](./images/nginx/6.png)
 
 ## gogs.conf的代码如下
 ``` 
