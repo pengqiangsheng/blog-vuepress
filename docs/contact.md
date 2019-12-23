@@ -4,7 +4,7 @@
 以下是我认为不错的网站
 :::
 
-- [Inner.ink](https://inner.ink) --- 个人博客 <Badge text="Hexos"/>
+- [Inner.ink](https://inner.ink) --- 个人博客 <Badge text="Hexo"/>
 - [我的掘金](https://juejin.im/user/5c89f6ee5188257e826ab2b7) --- 个人主页 <Badge text="掘金"/>
 - [我的优酷](https://i.youku.com/i/UMzYwMzA4ODcy)
 - [指舞社官网](https://www.fingerdancer.cn)

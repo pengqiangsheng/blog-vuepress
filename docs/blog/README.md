@@ -3,7 +3,7 @@ home: true
 meta:
   - name: keywords
     content: 知与南 彭小呆 技术分享
-heroImage: /blog.png
+heroImage: https://api.ixiaowai.cn/mcapi/mcapi.php
 actionText: 开始阅读 →
 actionLink: /blog/start.html
 features:
