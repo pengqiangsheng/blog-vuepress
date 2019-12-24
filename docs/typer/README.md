@@ -16,10 +16,10 @@
 
 ## 去我的站点看真正的效果
 
-=> [彭小呆的随笔杂谈](https://docs.inner.ink)  <=
+=> [彭小呆的随笔杂谈](https://inner.ink)  <=
 
 ## 一、效果展示
-![](https://user-gold-cdn.xitu.io/2019/12/21/16f27c7653b345ee?w=1920&h=1080&f=gif&s=3531097)
+![](http://img.pqs.guozhaoxi.top/vue-1.gif)
 > easy-typer-js是一个轻量级的插件, 用于实现页面文字的打字机效果. 它使用起来非常简单, 只需要几行代码就能实现高大上的打字机效果.而且对MVVM框架支持完美，还兼容原生JS.
 
 
@@ -104,7 +104,7 @@ export default {
 
 > 打开页面你会发现`我是被React所创造出来的！`这句话上帝所诉说！
 
-![](http://img.pqs.guozhaoxi.top/react.gif)
+![](http://img.pqs.guozhaoxi.top/react-1.gif)
 
 ```js
 import EasyTyper from 'easy-typer-js'
@@ -261,7 +261,7 @@ export default {
 
 ##### 回滚时间`sleep`设置为0时的效果
 
-![](https://user-gold-cdn.xitu.io/2019/12/21/16f27c7653b345ee?w=1920&h=1080&f=gif&s=3531097)
+![](http://img.pqs.guozhaoxi.top/t.gif)
 
 
 
@@ -348,7 +348,7 @@ export default showText
 
 ##### 只输出一句话
 
-![](http://img.pqs.guozhaoxi.top/react.gif)
+![](http://img.pqs.guozhaoxi.top/react-1.gif)
 
 
 #### 2.3.3 原生实例
@@ -391,7 +391,7 @@ let timer = setTimeout(() => {
 
 ##### 第一句输出后回滚，第二句和第三句不回滚！
 
-![](https://user-gold-cdn.xitu.io/2019/12/21/16f27f240fff13bd?w=1920&h=1080&f=gif&s=6786978)
+![](http://img.pqs.guozhaoxi.top/k.gif)
 
 
 
