@@ -208,6 +208,7 @@ function getBlog (title) {
       title: 'JavaScript && NodeJs',
       collapsable: false,
       children: [
+        'ztree',
         'element-table',
         '权限控制篇',
         '基于node的断点续传、分片上传',
