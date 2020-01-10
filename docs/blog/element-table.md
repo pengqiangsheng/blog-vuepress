@@ -6,7 +6,7 @@
 
 如果说Vue、React、Angular是前端三剑客，那么element-ui可以说在中后台领域占据半壁江山，github star数 43k之多。至今，它拥有了84个组件（Version 2.13.0）。
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7d99d0c66ba19?w=274&h=225&f=png&s=10212)
+![](./images/element/table/4E8A0BB6-E14C-404d-B64B-14198BFE60A1.png)
 
 > 前两行是空的，从第2行开始。
 
@@ -32,7 +32,7 @@
 
 效果如下：
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7daa73e88102a?w=587&h=191&f=png&s=9636)
+![](./images/element/table/4E784B53-A53A-4846-B888-391C6F1F5B39.png)
 
 > 一切看起来都很完美，但是在实际运用中状况是千奇百出。
 
@@ -40,12 +40,12 @@
 
 分页表格应该像下面这样：
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7db2202643cc0?w=778&h=522&f=png&s=30325)
+![](./images/element/table/2.png)
 
 
 于是我又去element-ui官网翻看文档，在**table**组件中找到了一个方法**toggleRowSelection**，此方法可以切换表格中具体哪一行的选中状态。
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7da2939e5b196?w=950&h=266&f=png&s=16330)
+![](./images/element/table/3.png)
 
 通过这个方法，我们在获取表格数据之后，马上用此方法设置之前选中过的数据，这样不就可以在用户切换的时候也把之前选中的行选中状态渲染出来了吗？
 
@@ -86,7 +86,7 @@ this.$nextTick(() => {
 
 > 首先看下table组件的结构
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7dbeb1f38b839?w=266&h=461&f=png&s=14035)
+![](./images/element/table/4.png)
 
 结构就是这样，最外层的index.js用于导出这个table模块，里面的代码也非常简单，肯定能看懂的。
 
@@ -183,13 +183,13 @@ export function toggleRowStatus(statusArr, row, newVal) {
 
 既然知道，table组件是通过selection存放被选中的row，那么，就搜索selection吧。
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7de0e2ce56437?w=290&h=98&f=png&s=3751)
+![](./images/element/table/5.png)
 
 得到了78个结果，在7个文件中。得到的结果太多了，我们不想要这样的结果。
 
 然后进一步用全匹配搜索：
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7de24eff0513a?w=283&h=93&f=png&s=3906)
+![](./images/element/table/6.png)
 
 得到了38个结果，在5个文件中。
 
@@ -197,7 +197,7 @@ export function toggleRowStatus(statusArr, row, newVal) {
 
 纯按照Vscode给我搜出来的顺序，第一个文件是**config.js**文件。
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7de4be11410bf?w=1266&h=991&f=png&s=178567)
+![](./images/element/table/7.png)
 
 这个关键词在config.js文件中出现了4次，可以看到前面两次匹配结果是一个样式，并不是我们要的东西。
 
@@ -240,11 +240,11 @@ export const cellForced = {
 
 其实接着看搜索结果第三个文件：watcher.js中，很明显能找到它：
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7dec8dd4e1d5a?w=1010&h=544&f=png&s=75172)
+![](./images/element/table/8.png)
 
 并且在第五个文件：table.vue中使用了mapStates去映射selection，也可以找到它的影子：
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7ded73161d0aa?w=967&h=663&f=png&s=67730)
+![](./images/element/table/9.png)
 
 
 
@@ -287,7 +287,7 @@ value={ store.isSelected(row) }
 
 ok，找到store文件夹，搜索一下**isSelected**关键词，在watcher.js中，我们找到了它：
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7df28401be315?w=845&h=440&f=png&s=39002)
+![](./images/element/table/10.png)
 
 ```js
 // watcher.js 120行
@@ -318,7 +318,7 @@ const row2 = { name: '1', id: 0, code: 110110, area: '北京市', street: '二�
 ```
 row1和row2他喵的不相等。
 
-![](https://user-gold-cdn.xitu.io/2020/1/7/16f7dfb610e95c62?w=194&h=125&f=png&s=3250)
+![](./images/element/table/426ABE3A-48A6-4504-9EC3-870AD23D534E.png)
 
 但是根据我们的实际业务，row1和row2结构一样，id一样，这两个玩意就是一个东西。
 

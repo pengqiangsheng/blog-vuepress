@@ -21,7 +21,7 @@
 
 于是擅长找资源的我，找啊找，咦，找到一个很霸气的家伙：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8ce76a10a7487?w=607&h=153&f=png&s=12091)
+![](./images/ztree/6C2BD9CC-B8F4-4469-8E2D-2ABCA90551EB.png)
 
 你看它牛的，轻松实现海量数据的高性能渲染。
 
@@ -29,7 +29,7 @@
 
 还解释了为什么要用这玩意：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8ce757196bb2a?w=944&h=366&f=png&s=41848)
+![](./images/ztree/2B684B4C-8C7D-4723-BC8D-AB74729DF073.png)
 
 
 > 来来来，有不服气吗？ ===》 [big-tree.json](https://refined-x.com/Vue-Giant-Tree/mock/big-tree.json)
@@ -41,27 +41,27 @@
 
 > 大小
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8cf16d3b97e55?w=342&h=250&f=png&s=20364)
+![](./images/ztree/5EBBACBE-6CD8-4ec4-B9F4-62EC3DFD1F65.png)
 
 > 内容
 
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8cf2ca5fd260f?w=857&h=257&f=png&s=65918)
+![](./images/ztree/1D0EA3A9-ED6F-4c68-AAD8-807E69C11CD0.png)
 
 
 一顿git clone操作，先是yarn，然后serve跑起来，F12按一按。
 
 > 肉眼看：加载的非常快！眨眼之间！
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8cedd562c561a?w=785&h=788&f=png&s=46829)
+![](./images/ztree/192080D7-1A3E-487c-BADE-1FC7F6ED978B.png)
 
 > 看下dom加载：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8ceded0cbf1a1?w=161&h=36&f=png&s=1213)
+![](./images/ztree/B6C0DD04-EC47-491d-BFA6-D4FB7EA61196.png)
 
 
 ??? 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8cef134b131b6?w=600&h=600&f=jpeg&s=70712)
+![](./images/ztree/black-man.jpg)
 
 
 确实牛逼啊！！！
@@ -86,7 +86,7 @@
 - GitHub链接：[**vue-magic-tree**](https://github.com/pengqiangsheng/vue-magic-tree)
 - 线上测试地址：[测试](http://tree.inner.ink/)
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d63370978fae?w=757&h=699&f=png&s=36900)
+![](./images/ztree/1F87F839-0662-44d1-AF95-4D7103CF910C.png)
 
 > 亮眼表现：
 
@@ -95,7 +95,7 @@
 
 > 随机渲染多种icon图表
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d6620545611d?w=254&h=310&f=png&s=12081)
+![](./images/ztree/B7383A8F-1DBC-4acb-9BA6-ED00B1F92CBA.png)
 
 
 这样，这颗参天大树就满足了业务复杂程度为O(n * n)的业务了。
@@ -136,17 +136,17 @@ const bigData = require("@/mock/big-tree.json");
 
 ### 3.1 我尊贵Vip iview表示不服!
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d5a70bc4d117?w=622&h=872&f=gif&s=47667)
+![](./images/ztree/iview.gif)
 
 ### 3.2 我平头哥element表示不服!
 
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d5aa8b7f65e8?w=622&h=872&f=gif&s=60807)
+![](./images/ztree/ele.gif)
 
 ### 3.3 Ztree 牛逼
 
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d5b1ed5521ca?w=622&h=872&f=gif&s=48356)
+![](./images/ztree/ztree.gif)
 
 ### 3.4 结果分析
 
@@ -164,14 +164,14 @@ const bigData = require("@/mock/big-tree.json");
 
 > 嘿嘿，油头蓬面大叔来了
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d04e2af0ba3b?w=240&h=240&f=gif&s=252090)
+![](./images/ztree/0189185a3c70eba801206ed3c9f14f.jpg)
 
 > 十八禁哈
 
 既然知道这颗树如此优秀核心还是在于ztree，那么咱们就把它的开源代码下载下来，搞起来！！！
 
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d7b9bb163cbc?w=196&h=337&f=png&s=9078)
+![](./images/ztree/85B1FD89-F03F-4665-9F7E-35D719B0731E.png)
 
 > 这就是ztree的源码（JQuery zTree v3.5.41）
 
@@ -203,7 +203,7 @@ jquery.ztree.exhide.js
 
 因为咱们需要改变它陈旧古老的icon节点，所以从[文档](http://www.treejs.cn/v3/faq.php)入手
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d83d40a437cc?w=634&h=536&f=png&s=50504)
+![](./images/ztree/9031A42B-F5C7-4e62-BCAE-F2FD4CE157DA.png)
 
 > 我们可以找到控制节点图标的功能设置是通过一个叫做setting.view.showIcon变量控制的
 
@@ -217,7 +217,7 @@ jquery.ztree.exhide.js
 
 打开all文件：其实里面备注什么都很详细和完善。
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8d86af05fdcde?w=536&h=970&f=png&s=57911)
+![](./images/ztree/F6014B01-0163-4cfe-8471-2C53F5621F86.png)
 
 定义了：
 - _consts常量
@@ -227,7 +227,7 @@ jquery.ztree.exhide.js
 
 继续往下看：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8dd55d6bc42a6?w=515&h=514&f=png&s=29470)
+![](./images/ztree/E68036AE-9E1B-406b-988A-E526792BEA0A.png)
 
 定义了：
 - 操作数据的方法集合（data）
@@ -246,7 +246,7 @@ jquery.ztree.exhide.js
 
 首先不要慌，先看函数名，相信自己能够看懂。
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8ddd39f552e17?w=770&h=936&f=png&s=87780)
+![](./images/ztree/E805D87D-8E7F-4c4b-A61B-E43B6BDC38DA.png)
 
 圈起来这个**makeDOMNodeIcon**，就是渲染icon和节点名称的那个方法。
 
@@ -276,7 +276,7 @@ makeDOMNodeIcon: function (html, setting, node) {
 
 往下翻看：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8de457a28b2c1?w=540&h=92&f=png&s=8245)
+![](./images/ztree/3D611AB6-9EE3-48b5-8911-12D6C2B8F0B7.png)
 
 
 ### 4.5 makeNodeIcoClass 给节点icon写上类名
@@ -302,7 +302,7 @@ makeNodeIcoClass: function (setting, node) {
 
 `consts.className.BUTTON`这个是常量，可以在`_consts`常量列表中找到值就是：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8de6f176ba47a?w=336&h=182&f=png&s=7797)
+![](./images/ztree/FA3401F0-949B-4578-B02F-EE24123AD109.png)
 
 然后`icoCss`就是固定一个`ico` + `open close docu` 三选一拼接而成，如果设置了`iconSkin`属性那么就拼上这个。
 也就是得到了两个类名吧：`button ico_open`这样形式的。
@@ -343,7 +343,7 @@ nodeIcon: function (setting, node, newName) {
 
 `setting`对象中的属性：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8df35874cb102?w=330&h=586&f=png&s=18973)
+![](./images/ztree/4465458A-A556-4fad-AA92-6F63E6572DDF.png)
 
 在这个例子中，获得的值就是`setting.data.iconMap[0] = 'iconjianyuede'`
 
@@ -398,7 +398,7 @@ import './style/iconfont.css'
 ```
 然后引用咱们魔改后的ztree源码文件all：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8e04a6c03bf0c?w=872&h=269&f=png&s=28304)
+![](./images/ztree/DBCA7543-F453-49f2-8435-363142F65419.png)
 
 将它**require**进来，别忘了引入**jquery**!!!
 
@@ -417,7 +417,7 @@ $.fn.zTree.init()
 
 最后效果就是这样：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8e02a2da953f7?w=246&h=66&f=png&s=2314)
+![](./images/ztree/F307E15D-2E11-4d7f-B564-C3F256A9817C.png)
 
 效果不错，但是在你操作的时候，比如**折叠这个节点**会出现，此节点已有的图标会消失的问题。
 所以，还需要继续看下源码接着修改。
@@ -427,13 +427,13 @@ $.fn.zTree.init()
 
 在view集合中继续查看函数名，可以找到：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8e0b409d168f9?w=344&h=127&f=png&s=6542)
+![](./images/ztree/DF996E8D-ADAA-4cd1-93A8-E83B38AF073F.png)
 
 这三个方法，前缀都是expandCollapse意思就是展开节点这一类的意思。
 
 展开**expandCollapseNode**方法，往下翻到1235行：
 
-![](https://user-gold-cdn.xitu.io/2020/1/10/16f8e0c8292e98d0?w=1087&h=617&f=png&s=148221)
+![](./images/ztree/C7F506C5-5C32-45e8-B77D-A83C74F733F4.png)
 
 这里用一个`node.open`属性去判断调用**replaceIcoClass**方法，替换了icon图标dom的class。所以下一步，修改这个方法。
 
