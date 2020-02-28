@@ -173,7 +173,8 @@ function getFeaturesSidebar (title) {
       children: [
         '',
         'line-edit',
-        'easy-typer'
+        'easy-typer',
+        'h5-live-face'
       ]
 	  }
 	]
@@ -208,6 +209,7 @@ function getBlog (title) {
       title: 'JavaScript && NodeJs',
       collapsable: false,
       children: [
+        'H5实时在线人脸识别',
         'ztree',
         'element-table',
         '权限控制篇',
