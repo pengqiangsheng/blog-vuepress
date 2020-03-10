@@ -1,6 +1,7 @@
 <template>
   <header class="hero">
-    <img src="https://api.ixiaowai.cn/mcapi/mcapi.php" alt="hero">
+    <dog-coding v-if="random" />
+    <img v-else src="https://api.ixiaowai.cn/mcapi/mcapi.php" alt="hero" />
       <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
       <p class="description">
         「{{ creator }}」
@@ -14,8 +15,12 @@
 </template>
 <script>
 import EasyTyper from 'easy-typer-js'
+import DogCoding from '../Dog'
 export default {
   name: 'home',
+  components: {
+    DogCoding
+  },
   data() {
     return {
       hitokoto: '黎明前的黑暗是最深不见底的黑暗',
@@ -29,11 +34,12 @@ export default {
         type: 'rollback',
         backSpeed: 40
       },
-      typer: null
+      typer: null,
+      random: 0
     }
   },
   mounted() {
-    this.init()  
+    this.init()
   },
   beforeDestroy() {
     this.typer.close()
@@ -43,6 +49,10 @@ export default {
     init() {
       // this.getImage()
       this.fetchData()
+      this.getRandom()
+    },
+    getRandom() {
+      this.random = Math.round(Math.random())
     },
     getImage() {
       fetch('https://api.dujin.org/pic/')

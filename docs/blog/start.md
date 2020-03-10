@@ -2,7 +2,7 @@
 
 > 大致先分为三类吧。:pig_nose:
 
-- JavaScript
+- JavaScript <Badge text="包含Node JS 和 Vue JS"/>
 - Linux
 - Other
 

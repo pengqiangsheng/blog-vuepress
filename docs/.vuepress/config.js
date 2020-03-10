@@ -206,13 +206,20 @@ function getBlog (title) {
       ]
     },
     {
-      title: 'JavaScript && NodeJs',
+      title: 'JavaScript && Vue',
       collapsable: false,
       children: [
+        'Vue插件开发之拍照上传功能',
         'H5实时在线人脸识别',
         'ztree',
         'element-table',
         '权限控制篇',
+      ]
+    },
+    {
+      title: 'NodeJs',
+      collapsable: false,
+      children: [
         '基于node的断点续传、分片上传',
         '基于node的分片传输和下载',
       ]
