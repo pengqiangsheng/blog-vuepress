@@ -75,6 +75,7 @@ export default {
         this.my_rightEar = ["up", "down", "flat", "middle"].random();
         this.my_blush = [true, false].random();
         this.my_pop = true
+        this.$emit('disapper', true)
         this.disapper()
       }
     },
@@ -82,6 +83,7 @@ export default {
       const time = 3000 + Math.random() * 2000;
       !this.timer && (this.timer = setTimeout(() => {
         this.my_pop = false;
+        this.$emit('disapper', false)
         clearTimeout(this.timer)
         this.timer = null
       }, time))
