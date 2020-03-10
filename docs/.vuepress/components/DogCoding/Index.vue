@@ -126,7 +126,7 @@
 </template>
 <script>
 export default {
-  
+  name: 'DogCoding'
 }
 </script>
 <style scoped>

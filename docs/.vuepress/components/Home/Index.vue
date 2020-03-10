@@ -1,6 +1,7 @@
 <template>
   <header class="hero">
-    <dog-coding v-if="random" />
+    <dog-cute ref="DogCute" v-if="random === 1"/>
+    <dog-coding v-else-if="random === 2" />
     <img v-else src="https://api.ixiaowai.cn/mcapi/mcapi.php" alt="hero" />
       <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
       <p class="description">
@@ -15,11 +16,16 @@
 </template>
 <script>
 import EasyTyper from 'easy-typer-js'
-import DogCoding from '../Dog'
+import DogCoding from '../DogCoding'
+import DogCute from '../DogCute'
+Array.prototype.random = function() {
+  return this[Math.floor(Math.random() * this.length)];
+};
 export default {
   name: 'home',
   components: {
-    DogCoding
+    DogCoding,
+    DogCute
   },
   data() {
     return {
@@ -52,7 +58,7 @@ export default {
       this.getRandom()
     },
     getRandom() {
-      this.random = Math.round(Math.random())
+      this.random = [1,2,3,1].random()
     },
     getImage() {
       fetch('https://api.dujin.org/pic/')
@@ -67,6 +73,7 @@ export default {
           this.creator = creator
           this.hitokoto = hitokoto
           this.initTyped(hitokoto, this.fetchData)
+          this.$refs.DogCute && this.$refs.DogCute.random()
         })
         .catch(err => {
           console.error(err)
