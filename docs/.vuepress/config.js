@@ -209,6 +209,7 @@ function getBlog (title) {
       title: 'JavaScript && Vue',
       collapsable: false,
       children: [
+        '闭包',
         'Vue插件开发之拍照上传功能',
         'H5实时在线人脸识别',
         'ztree',
