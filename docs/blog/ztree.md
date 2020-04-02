@@ -487,3 +487,13 @@ replaceIcoClass: function (node, obj, newName) {
 
 GitHub链接：[**vue-magic-tree**](https://github.com/pengqiangsheng/vue-magic-tree) 希望能过帮到大家。
 线上测试地址：[测试](http://tree.inner.ink/)
+
+## 六、更新内容
+
+1.vue-magic-tree发布到了npm上，可通过：
+
+```shell
+yarn add vue-magic-tree
+```
+
+去安装使用。
