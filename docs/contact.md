@@ -6,7 +6,7 @@
 
 - [Inner.ink](https://inner.ink) --- 个人博客 <Badge text="Hexo"/>
 - [我的掘金](https://juejin.im/user/5c89f6ee5188257e826ab2b7) --- 个人主页 <Badge text="掘金"/>
-- [郭二蛋](http://blog.guozhaoxi.top/) --- 二蛋哥哥 <Badge text="超棒">
+- [郭二蛋](http://blog.guozhaoxi.top/) --- 二蛋哥哥 <Badge text="超棒"/>
 - [我的优酷](https://i.youku.com/i/UMzYwMzA4ODcy)
 - [指舞社官网](https://www.fingerdancer.cn)
 - [大仙seo](https://www.daxianseo.cn)
