@@ -38,7 +38,8 @@ export default {
         singleBack: true,
         sleep: 6000,
         type: 'rollback',
-        backSpeed: 40
+        backSpeed: 40,
+        sentencePause: false
       },
       typer: null,
       random: 0
