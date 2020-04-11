@@ -26,9 +26,12 @@
 我是一个什么样的人呢？其实我也不是很了解自己。
 > 每一个时期都会做一些事情，有的时候自己都不是很明白为什么做这些，但，这就是生活！
 
-## 目前在做维护的两个开源项目
+## 开源项目
 - [easy-typer-js](https://github.com/pengqiangsheng/easy-typer-js)
 - [vue-qrcode-directive](https://github.com/pengqiangsheng/vue-qrcode-directive)
+- [vue-magic-tree](https://github.com/pengqiangsheng/vue-magic-tree)
+- [@pengqiangsheng/apicache](https://github.com/pengqiangsheng/apicache)
+- [p-blog](https://github.com/pengqiangsheng/pblog)
 
 ## 个人部署的一些网站
 
