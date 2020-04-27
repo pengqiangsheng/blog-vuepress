@@ -27,9 +27,10 @@ module.exports = {
 			{
 				text: '开源',
 				items: [
-					{ text: 'halcon', link: '/halcon/' },
+          { text: 'halcon', link: '/halcon/' },
+          { text: 'p-blog', link: '/pblog/' },
 					{ text: 'easy-typer-js', link: '/typer/' },
-					{ text: 'vue-qrcode-direction', link: '/qrcode/' }
+          { text: 'vue-qrcode-direction', link: '/qrcode/' }
 				]
 			},
 			{
@@ -44,7 +45,8 @@ module.exports = {
 		sidebar: {
 			'/halcon/': getHalconSidebar('指南', '深入'),
 			'/typer/': getTyperSidebar('打字机插件'),
-			'/qrcode/': getQrCodeSidebar('二维码插件'),
+      '/qrcode/': getQrCodeSidebar('二维码插件'),
+      '/pblog/': getPblogSidebar('P-BLOG博客框架'),
       '/features/': getFeaturesSidebar('特性'),
       '/blog/': getBlog('技术分享'),
       '/life/': getLife('杂笔'),
@@ -154,6 +156,18 @@ function getTyperSidebar (title) {
 }
 
 function getQrCodeSidebar (title) {
+	return [
+		{
+			title: title,
+			collapsable: false,
+			children: [
+				''
+			]
+		}
+	]
+}
+
+function getPblogSidebar (title) {
 	return [
 		{
 			title: title,
