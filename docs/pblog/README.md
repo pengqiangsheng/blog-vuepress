@@ -64,10 +64,11 @@ module.exports = {
 // template: 自定义模板的文件夹绝对路径（首页名称为index.pug, 文章页面模板名称为post.pug）
 ```
 
-目前有5大字段可以配置哦！
+目前有6大字段可以配置哦！
 
 - title
 - move
+- logo
 - css
 - script
 - template
@@ -99,6 +100,33 @@ module.exports = {
 
 对的，物理绝对路径！！
 
+## 模板变量
+
+> 当你开始尝试自定义模板，模板变量变得尤为重要，因为这些是pblog提供的内容变量。
+
+`post.pug`:
+
+- link 链接对象
+  - prev 上一篇
+  - next 下一篇
+- title 标题
+- markdown 内容
+- list_css css数组
+- list_script script数组
+- list_doc 文章列表
+
+`index.pug`:
+
+- logo 首页显示的Pblog
+- move 一句话
+- readme 根目录下的README.md转化后的内容
+- history 根目录下的history.md转化后的内容
+- title
+- list_doc
+- list_css
+- list_script
+
+这些模板变量，会提供到相应的pug页面，你可以用一个或多个，或者一个不用，都没有问题
 
 ## 自定义主题
 
