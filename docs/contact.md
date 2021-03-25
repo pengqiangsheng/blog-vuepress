@@ -12,5 +12,5 @@
 - [大仙seo](https://www.daxianseo.cn)
 - [Angelive](http://www.angelive.fun)
 - [alili.tech](https://alili.tech/)
-
+-[linner.ink](https://www.linner.ink)---来我这看看电影，可好！
 > 👇👇请点击下方的编辑此页，提交你的友情链接。  
