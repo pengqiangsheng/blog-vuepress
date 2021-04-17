@@ -33,7 +33,7 @@
 - [@pengqiangsheng/apicache](https://github.com/pengqiangsheng/apicache)
 - [p-blog](https://github.com/pengqiangsheng/pblog)
 
-## 个人部署的一些网站
+## 个人部署的一些网站 <Badge text="失效QAQ" type="error"/>
 
 - [博客](https://inner.ink)
 - [文档](https://docs.inner.ink)
@@ -46,6 +46,7 @@
 - [微信读书demo](https://book.inner.ink/) 
 - [私有mysql](https://db.inner.ink/)
 - [书屋](http://book.admin.inner.ink/)  
+- 后面会慢慢转移T_T
 
 ## 关于这篇halcon分享
 
