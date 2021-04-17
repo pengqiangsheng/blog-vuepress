@@ -20,7 +20,7 @@ module.exports = {
 	themeConfig: {
 		nav: [
 			{ text: '首页', link: '/' },
-			// { text: '指南', link: '/guide/' },
+			{ text: '2020', link: '/2020/' },
 			{ text: '技术', link: '/blog/' },
 			{ text: '杂笔', link: '/life/' },
 			{ text: '特性', link: '/features/' },
@@ -42,6 +42,7 @@ module.exports = {
 		],
 		lastUpdated: '上次更新',
 		sidebar: {
+      '/2020/': get2020('2020'),
 			'/halcon/': getHalconSidebar('指南', '深入'),
 			'/typer/': getTyperSidebar('打字机插件'),
 			'/qrcode/': getQrCodeSidebar('二维码插件'),
@@ -247,6 +248,19 @@ function getBlog (title) {
         '关于php执行shell命令的一些体会',
         'hexo生成博文插入图片的办法',
         '用hexo和github搭建个人博客小站全攻略',
+      ]
+	  }
+	]
+}
+
+function get2020 (title) {
+	return [
+	  {
+      title: title,
+      collapsable: false,
+      children: [
+        '',
+        'university'
       ]
 	  }
 	]
