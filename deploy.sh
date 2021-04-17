@@ -15,4 +15,4 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f https://git.inner.ink/pqs/halcon.git master
+git push -f https://gitee.com/redqueen/blog.git master
