@@ -20,7 +20,8 @@ module.exports = {
 	themeConfig: {
 		nav: [
 			{ text: '首页', link: '/' },
-			{ text: '2020', link: '/2020/' },
+			// { text: '2020', link: '/2020/' }, 隐藏url
+      { text: 'Lot', link: '/lot/' },
 			{ text: '技术', link: '/blog/' },
 			{ text: '杂笔', link: '/life/' },
 			{ text: '特性', link: '/features/' },
@@ -43,6 +44,7 @@ module.exports = {
 		],
 		lastUpdated: '上次更新',
 		sidebar: {
+      '/lot/': getLot('Lot'),
       '/2020/': get2020('2020'),
 			'/halcon/': getHalconSidebar('指南', '深入'),
 			'/typer/': getTyperSidebar('打字机插件'),
@@ -275,6 +277,18 @@ function get2020 (title) {
       children: [
         '',
         'university'
+      ]
+	  }
+	]
+}
+
+function getLot (title) {
+	return [
+	  {
+      title: title,
+      collapsable: false,
+      children: [
+        ''
       ]
 	  }
 	]

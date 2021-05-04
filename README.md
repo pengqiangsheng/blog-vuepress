@@ -22,7 +22,7 @@
 
 > 我的那篇论文
 
-地址 => [halcon](https://halcon.inner.ink)
+地址 => [halcon](https://halcon.inner.ink) [新地址](https://redqueen.gitee.io/halcon/)
 
 ### 介绍
 
