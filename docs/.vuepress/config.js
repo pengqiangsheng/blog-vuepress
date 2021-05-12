@@ -288,7 +288,8 @@ function getLot (title) {
       title: title,
       collapsable: false,
       children: [
-        ''
+        '',
+        'esp32cam'
       ]
 	  }
 	]
