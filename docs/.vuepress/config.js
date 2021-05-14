@@ -289,7 +289,9 @@ function getLot (title) {
       collapsable: false,
       children: [
         '',
-        'esp32cam'
+        'esp32cam',
+        'esp8266ws2812',
+        'esp8266webgenerator'
       ]
 	  }
 	]
