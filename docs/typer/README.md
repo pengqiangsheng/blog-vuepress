@@ -136,7 +136,7 @@ class showText extends React.Component {
       sleep: 0,
       type: 'normal',
       backSpeed: 40,
-      sentencePause：false
+      sentencePause: false
     }
     // 实例化
     this.typer = new EasyTyper(obj, '我是被React所创造出来的！', this.completeAsentence, this.changeOutput)
@@ -198,7 +198,7 @@ export default {
         sleep: 0,
         type: 'rollback',
         backSpeed: 40,
-        sentencePause：false
+        sentencePause: false
       }
     }
   },
@@ -218,6 +218,7 @@ export default {
         })
         .then(({ hitokoto }) => {
             this.initTyped(hitokoto)
+        })
         .catch(err => {
             console.error(err)
         })
@@ -312,7 +313,7 @@ class showText extends React.Component {
       sleep: 0,
       type: 'normal',
       backSpeed: 40,
-      sentencePause：false
+      sentencePause: false
     }
     // 实例化
     this.typer = new EasyTyper(obj, '我是被React所创造出来的！', this.completeAsentence, this.changeOutput)
@@ -424,7 +425,7 @@ let timer = setTimeout(() => {
 | 参数(params)          | 含义(meaning)                                    | 类型(type)  |
 | --------------------- | ----------------------------------------------- | ---------------- |
 | `output`              | 输出内容,使用MVVM框架时直接使用 { obj.output }  |      string          |
-| `type`                | 下一次的行为 'roolback', 'normal', 'custom'       |      string(有且仅有此三种)    |
+| `type`                | 下一次的行为 'rollback', 'normal', 'custom'       |      string(有且仅有此三种)    |
 | `isEnd`               | 全局控制是否终止                                  |      boolean         |
 | `speed`               | 打字速度                                         |      number          |
 | `backSpeed`           | 回滚速度                                          |      number          |
@@ -440,6 +441,7 @@ obj配置对象校验非常严格，对象的字段和类型都要遵从以上�
 
 |方法名|	说明	|参数 |
 |---|-------|-----|
+|`play`|	开始打字 |	无 |
 |`close`|	停止打字 |	无 |
 |`sleep`|	单独可以调用睡眠线程，可以使用在任何地方 | ms(毫秒) |
 
