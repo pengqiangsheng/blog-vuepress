@@ -10,5 +10,6 @@
 - [我的优酷](https://i.youku.com/i/UMzYwMzA4ODcy)
 - [alili.tech](https://alili.tech/) <Badge text="amazing"/>
 - [吾为极客](https://www.55geek.cn/)
+- [洛琪希图书馆](https://www.roxylib.com/) <Badge text="同好"/>
 
 > 👇👇请点击下方的编辑此页，提交你的友情链接。  

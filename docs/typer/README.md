@@ -1,8 +1,8 @@
 # easy-typer-js
 
-<a href="https://www.npmjs.com/package/easy-typer-js"><img src="https://img.shields.io/npm/v/easy-typer-js.svg" alt="Version"></a>
-<a href="https://www.npmjs.com/package/easy-typer-js"><img src="https://img.shields.io/npm/l/easy-typer-js.svg" alt="License"></a>
-<a href="https://npmcharts.com/compare/easy-typer-js?minimal=true"><img src="https://img.shields.io/npm/dm/easy-typer-js.svg" alt="Downloads"></a>
+<a href="https://www.npmjs.com/package/easy-typer-js"><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/591bb995b04048fb92a60849d3a1b245~tplv-k3u1fbpfcp-zoom-1.image" alt="Version"></a>
+<a href="https://www.npmjs.com/package/easy-typer-js"><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/079dec6b89dc40c895e2eb199d8771b4~tplv-k3u1fbpfcp-zoom-1.image" alt="License"></a>
+<a href="https://npmcharts.com/compare/easy-typer-js?minimal=true"><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e66deac21c3441c8f90e590782a3377~tplv-k3u1fbpfcp-zoom-1.image" alt="Downloads"></a>
 
 > 功能十分强大打字机插件，兼容原生JS和MVVM类框架（Vue,React,angular），随心所欲的输出任何你想输出的内容。
 
@@ -18,14 +18,14 @@
 
 ## 去我的站点看真正的效果
 
-=> [彭小呆的随笔杂谈](https://inner.ink)  <=
+=> [彭小呆的随笔杂谈](https://inner.ink)  （失效QAQ）<=
 
-
+=> [彭小呆的随笔杂谈](https://redqueen.gitee.io/) (新地址，挂在gitee)  <=
 
 
 ## 一、效果展示
-![](https://user-gold-cdn.xitu.io/2019/12/23/16f325042e4afa28?w=822&h=590&f=gif&s=113630)
-![](https://user-gold-cdn.xitu.io/2019/12/23/16f324f83b23d43f?w=813&h=508&f=gif&s=155566)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1cdd9299547c4183a5f5de66541f7c83~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a17d0d9d8d76425387698fd7702dc8b1~tplv-k3u1fbpfcp-zoom-1.image)
 > easy-typer-js是一个轻量级的插件, 用于实现页面文字的打字机效果. 它使用起来非常简单, 只需要几行代码就能实现高大上的打字机效果.而且对MVVM框架支持完美，还兼容原生JS.
 
 
@@ -59,8 +59,11 @@ const typed = new EasyTyper(obj, input, fn, hooks)
 ### 2.2 使用它作为你最强大的武器吧！
 
 #### 2.2.1 在原生JS中使用
+> 首先按照上一小节的**方法2常规导入**，要注意的是如果你导入的是`easy-typer-js@1.0.3`这个版本的js，不支持`sentencePause`这个配置。
 
 > 打开页面你会发现`黎明前的黑暗是最深不见底的黑暗！`这句话被一个一个字`敲`出来！哇哦！是不是很炫酷！
+
+> 具体 `实例EasyTyper` 暴露的方法，在后面几节有文档可以查看。
 
 ```js
   const typing = new EasyTyper(obj, `黎明前的黑暗是最深不见底的黑暗！`, 
@@ -110,7 +113,7 @@ export default {
 
 > 打开页面你会发现`我是被React所创造出来的！`这句话上帝所诉说！
 
-![](https://user-gold-cdn.xitu.io/2019/12/23/16f32526f656e5e1?w=813&h=600&f=gif&s=748601)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e2c7907780cd400095f23a30dcaf76c1~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```js
 import EasyTyper from 'easy-typer-js'
@@ -136,7 +139,7 @@ class showText extends React.Component {
       sleep: 0,
       type: 'normal',
       backSpeed: 40,
-      sentencePause: false
+      sentencePause：false
     }
     // 实例化
     this.typer = new EasyTyper(obj, '我是被React所创造出来的！', this.completeAsentence, this.changeOutput)
@@ -270,7 +273,7 @@ export default {
 
 ##### 回滚时间`sleep`设置为0时的效果
 
-![](https://user-gold-cdn.xitu.io/2019/12/23/16f32533326539eb?w=1200&h=800&f=gif&s=146036)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c3b62847048942b6a94b44dac6dd33f0~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 
@@ -358,7 +361,7 @@ export default showText
 
 ##### 只输出一句话
 
-![](https://user-gold-cdn.xitu.io/2019/12/23/16f32526f656e5e1?w=813&h=600&f=gif&s=748601)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/42677b308e1e49259e2ee4b011fe6e58~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 #### 2.3.3 原生实例
@@ -377,7 +380,7 @@ const obj = {
   backSpeed: 40,
   sleep: 3000,
   singleBack: true,
-  sentencePause：false
+  sentencePause: false
 }
 const typing = new easyTyper(obj, `黎明前的黑暗是最深不见底的黑暗！`, (instance)=>{
     // 回调函数 如果这里使用了递归调用会一直循环打印，需要在外部触发停止
@@ -402,7 +405,7 @@ let timer = setTimeout(() => {
 
 ##### 第一句输出后回滚，后面不回滚！
 
-![](https://user-gold-cdn.xitu.io/2019/12/23/16f325115a964e14?w=627&h=254&f=gif&s=46466)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5a688bfaf4f04b25a6dde4045d1be1f6~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 
@@ -432,7 +435,10 @@ let timer = setTimeout(() => {
 | `sleep`               | 完整输出完一句话后，睡眠一定时间后触发回滚事件           |       number         |
 | `singleBack`          | 单次的回滚（优先级高于type）                       |      boolean         |
 | `sentencePause`       | 整个生命周期运行完毕后，句子是否暂停显示（仅在回滚模式下生效）             |      boolean         |
-obj配置对象校验非常严格，对象的字段和类型都要遵从以上格式，否则你会在控制台看到一个非常显眼的error！
+
+> obj配置对象校验非常严格，对象的字段和类型都要遵从以上格式，否则你会在控制台看到一个非常显眼的error！
+
+> `sentencePause`配置在`1.0.3`（含）以下版本不可使用
 
 
 
@@ -467,7 +473,7 @@ obj配置对象校验非常严格，对象的字段和类型都要遵从以上�
 - CDN地址: [https://cdn.jsdelivr.net/npm/easy-typer-js@1.0.3/easy-typer-min.js](https://cdn.jsdelivr.net/npm/easy-typer-js@1.0.3/easy-typer-min.js)
 
 
-## 六、计划更新内容
+## 六、计划更新内容 （暂无空2022）
 - 1.可以输出不仅是文字还有dom元素
 - 2.给输出的文字加动画特效
 - 3.输出时加上敲字的声音
@@ -503,3 +509,11 @@ obj配置对象校验非常严格，对象的字段和类型都要遵从以上�
 ### 2.0.0
 
 - 重构源码，全面支持TS！
+
+### 2.1.0
+
+- 新增测试功能，引入`jest`测试框架
+- 新增测试单元，测试命令`yarn test`
+
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6899fc1dfd25461d934d96f32f28e6b9~tplv-k3u1fbpfcp-zoom-1.image)

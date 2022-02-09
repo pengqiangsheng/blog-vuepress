@@ -8,9 +8,11 @@
         「{{ creator }}」
       </p> 
       <p class="action">
-        <a href="/about" class="nav-link action-button">探索 →</a> <a href="/typer/" class="nav-link action-button" style="margin-left:20px;">打字原理 →</a>
+        <a href="/about.html" class="nav-link action-button">探索 →</a> <a href="/typer/" class="nav-link action-button" style="margin-left:20px;">打字原理 →</a>
       </p>
-      <div id='test'>
+      <div class="my-footer">
+        <div class="text-center">Copyright © 2022-2023  彭小呆</div>
+        <div class="text-center">大力感谢<a href="https://www.sfxyun.cn/">神枫云互联</a>15RMB/年vps</div>
       </div>
     </header>
 </template>
@@ -88,6 +90,14 @@ export default {
 }
 </script>
 <style lang="stylus">
+  .my-footer
+    width 100%
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #6a8bad;
+    .text-center
+      text-align center
+      padding 0px 0px 5px 0px
   .typed-cursor
     margin-left: 10px
     opacity: 1
