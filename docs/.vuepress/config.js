@@ -13,6 +13,8 @@ module.exports = {
 		['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#53A8FF' }],
 		['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
 		['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+    // <script async defer data-website-id="80502517-9e8f-48a9-98ab-3f1d1848f4c0" src="https://analytics.roxylib.com/umami.js"></script>
+    ['script', { 'data-website-id': '80502517-9e8f-48a9-98ab-3f1d1848f4c0', 'async': true ,'defer': true, type: 'text/javascrpit', src: 'https://analytics.roxylib.com/umami.js'}],
 		// ['meta', { 'http-equiv': 'Content-Security-Policy', content: 'Content-Security-Policy'}, { name: 'content', content: 'upgrade-insecure-requests'}]
     	// ['script', { type: 'text/javascrpit', src: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.min.js'}],
     	// ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/typing.js@2.1.0/typing.css'}]

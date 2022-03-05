@@ -3,18 +3,18 @@
     <dog-cute ref="DogCute" v-if="random === 1"/>
     <dog-coding v-else-if="random === 2" />
     <img v-else src="https://api.ixiaowai.cn/mcapi/mcapi.php" alt="hero" />
-      <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
-      <p class="description">
-        「{{ creator }}」
-      </p> 
-      <p class="action">
-        <a href="/about.html" class="nav-link action-button">探索 →</a> <a href="/typer/" class="nav-link action-button" style="margin-left:20px;">打字原理 →</a>
-      </p>
-      <div class="my-footer">
-        <div class="text-center">Copyright © 2022-2023  彭小呆</div>
-        <div class="text-center">大力感谢<a href="https://www.sfxyun.cn/">神枫云互联</a>15RMB/年vps</div>
-      </div>
-    </header>
+    <h2 style="border-bottom: none;" id="main-title">{{ obj.output }}<span class="typed-cursor">|</span></h2>
+    <p class="description">
+      「{{ creator }}」
+    </p> 
+    <p class="action">
+      <a href="/about.html" class="nav-link action-button">探索 →</a> <a href="/typer/" class="nav-link action-button" style="margin-left:20px;">打字原理 →</a>
+    </p>
+    <div class="my-footer">
+      <div class="text-center">Copyright © 2022-2023  彭小呆</div>
+      <div class="text-center">大力感谢：<a href="https://www.sfxyun.cn/">神枫云互联</a>15RMB/年vps、<a href="https://www.roxylib.com/">徒花</a>一个少年</div>
+    </div>
+  </header>
 </template>
 <script>
 import EasyTyper from 'easy-typer-js'
